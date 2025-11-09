@@ -9,7 +9,7 @@ type GeneralLayoutProps = {
 
 export function GeneralLayout({ children, showSidebar = false }: GeneralLayoutProps) {
   return (
-    <div className="min-h-screen flex flex-col bg-background text-foreground">
+    <div className="min-h-screen flex flex-col bg-[#F4F4F4] text-foreground">
       <Header />
 
       <div className="flex flex-1">
