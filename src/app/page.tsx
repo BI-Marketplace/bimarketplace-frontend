@@ -15,7 +15,7 @@ export default function Home() {
       stock: 12,
       rating: 4.5,
       reviews: 28,
-      image: "/images/products/headphones.jpg",
+      image: "/images/products/item1.webp",
       icon: "mdi:heart-outline",
       seller: {
         name: "AudioWorld",
@@ -30,7 +30,7 @@ export default function Home() {
       stock: 8,
       rating: 4.7,
       reviews: 54,
-      image: "/images/products/smartwatch.jpg",
+      image: "/images/products/item2.jpg",
       icon: "mdi:heart-outline",
       seller: {
         name: "TechStyle",
@@ -45,7 +45,7 @@ export default function Home() {
       stock: 20,
       rating: 4.3,
       reviews: 67,
-      image: "/images/products/speaker.jpg",
+      image: "/images/products/item3.jpg",
       icon: "mdi:heart-outline",
       seller: {
         name: "SoundPlus",
@@ -60,7 +60,7 @@ export default function Home() {
       stock: 16,
       rating: 4.8,
       reviews: 89,
-      image: "/images/products/mouse.jpg",
+      image: "/images/products/item4.avif",
       icon: "mdi:heart-outline",
       seller: {
         name: "GamerZone",
@@ -78,7 +78,7 @@ export default function Home() {
 
   return (
     <GeneralLayout>
-      <div className="text-black min-h-screen py-30">
+      <div className="text-black min-h-screen py-10">
         {/* Category + Product grid combined component */}
         <Category categories={categories} products={products} />
       </div>

@@ -40,12 +40,19 @@ export function Header({ onLoginClick }: HeaderProps) {
 
         {/* Center: Search (hidden on very small screens) */}
         <div className="flex-1 flex justify-center mx-2 sm:mx-4">
-          <input
-            type="text"
-            placeholder="Search Deals, Professionals..."
-            className="hidden sm:block w-full sm:w-[60%] bg-[#F4F4F4] text-[#5C5C5C] font-normal rounded-sm px-3 py-2 border-none focus:ring-2 focus:ring-primary focus:outline-none"
-          />
+          <div className="relative w-full sm:w-[60%] hidden sm:block">
+            <Icon
+              icon="mdi:magnify"
+              className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#5C5C5C] h-5 w-5"
+            />
+            <input
+              type="text"
+              placeholder="Search Deals, Professionals..."
+              className="w-full bg-[#F4F4F4] text-[#5C5C5C] font-normal rounded-sm pl-10 pr-3 py-2 border-none focus:ring-2 focus:ring-primary focus:outline-none"
+            />
+          </div>
         </div>
+
 
         {/* Right: Actions */}
         <div className="flex items-center gap-1 sm:gap-6">
@@ -162,12 +169,19 @@ export function Header({ onLoginClick }: HeaderProps) {
 
       {/* Mobile Search (visible on xs screens) */}
       <div className="sm:hidden mt-2 mb-2 px-2">
-        <input
-          type="text"
-          placeholder="Search Deals, Professionals..."
-          className="w-full bg-[#F4F4F4] text-[#5C5C5C] font-normal rounded-sm px-3 py-2 border-none focus:ring-2 focus:ring-primary focus:outline-none"
-        />
+        <div className="relative w-full">
+          <Icon
+            icon="mdi:magnify"
+            className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#5C5C5C] h-5 w-5"
+          />
+          <input
+            type="text"
+            placeholder="Search Deals, Professionals..."
+            className="w-full bg-[#F4F4F4] text-[#5C5C5C] font-normal rounded-sm pl-10 pr-3 py-2 border-none focus:ring-2 focus:ring-primary focus:outline-none"
+          />
+        </div>
       </div>
+
     </header>
   );
 }
