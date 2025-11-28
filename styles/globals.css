@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:wght@400;600;700&display=swap');
+
+.font-jaro {
+  font-family: "Jaro", sans-serif;
+  font-weight: 400; /* lightest available */
+  letter-spacing: 0.5px; /* creates a thinner feel */
+}
+
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
