@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer"
+import Footer from "@/components/layout/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,8 +24,8 @@ export default function Home() {
       className={`${geistSans.className} ${geistMono.className} min-h-screen bg-zinc-50 dark:bg-black`}
     >
       <div className="w-full flex flex-col justify-center items-center">
-             <Navbar />
-      <Footer/>
+        <Navbar />
+        <Footer />
       </div>
     </div>
   );
