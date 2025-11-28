@@ -27,9 +27,9 @@ export default function Home() {
     >
       <div className="w-full flex flex-col justify-center items-center">
         <Header />
+        <CarouselCard />
         <Footer />
       </div>
-      <CarouselCard />
     </div>
   );
 }
