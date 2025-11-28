@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import Header from "@/components/blocks/Header";
 import CarouselCard from "@/components/blocks/CarouselCard";
 
@@ -24,7 +25,10 @@ export default function Home() {
     <div
       className={`${geistSans.className} ${geistMono.className} min-h-screen bg-zinc-50 dark:bg-black`}
     >
-      <Header />
+      <div className="w-full flex flex-col justify-center items-center">
+        <Header />
+        <Footer />
+      </div>
       <CarouselCard />
     </div>
   );
