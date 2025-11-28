@@ -1,4 +1,5 @@
 import { FaFacebook, FaLinkedin, FaInstagram, FaXTwitter } from "react-icons/fa6";
+import { IoLogoAndroid } from "react-icons/io";
 import React from 'react'
 
 const Footer: React.FC = () => {
@@ -96,22 +97,25 @@ const Footer: React.FC = () => {
           <div className="flex items-center gap-3">
             <span>Follow Us:</span>
             <a href="#" className="text-white opacity-80 hover:opacity-100">
-              <FaFacebook />
+              <FaFacebook size={24} />
             </a>
             <a href="#" className="text-white opacity-80 hover:opacity-100">
-              <FaInstagram />
+              <FaInstagram size={24} />
             </a>
             <a href="#" className="text-white opacity-80 hover:opacity-100">
-              <FaLinkedin />
+              <FaLinkedin size={24} />
             </a>
             <a href="#" className="text-white opacity-80 hover:opacity-100">
-              <FaXTwitter />
+              <FaXTwitter size={24} />
             </a>
           </div>
 
-          <a href="#" className="opacity-80 hover:opacity-100">
-            Mobile App
-          </a>
+          <div className="flex items-center gap-3">
+            <a href="#" className="opacity-80 hover:opacity-100">
+              Mobile App
+            </a>
+            <IoLogoAndroid size={24} />
+          </div>
         </div>
         <hr className="border-[#E6F4EA]" />
         <div className="text-center text-sm opacity-80 mt-6">
