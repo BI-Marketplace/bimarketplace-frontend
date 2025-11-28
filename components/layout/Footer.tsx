@@ -1,4 +1,4 @@
-import { LucideFacebook, LucideLinkedin, LucideInstagram, LucideTwitter } from 'lucide-react';
+import { FaFacebook, FaLinkedin, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import React from 'react'
 
 const Footer: React.FC = () => {
@@ -58,7 +58,9 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-3 font-inter text-[16px] text-center">Legal</h3>
+            <h3 className="font-semibold mb-3 font-inter text-[16px] text-center">
+              Legal
+            </h3>
             <ul className="space-y-3 text-sm opacity-90 text-center">
               <li className="font-inter text-[14px] font-light text-[#FFFFFF]">
                 <a href="#">Terms & Conditions</a>
@@ -94,16 +96,16 @@ const Footer: React.FC = () => {
           <div className="flex items-center gap-3">
             <span>Follow Us:</span>
             <a href="#" className="text-white opacity-80 hover:opacity-100">
-              <LucideFacebook />
+              <FaFacebook />
             </a>
             <a href="#" className="text-white opacity-80 hover:opacity-100">
-              <LucideInstagram />
+              <FaInstagram />
             </a>
             <a href="#" className="text-white opacity-80 hover:opacity-100">
-              <LucideLinkedin />
+              <FaLinkedin />
             </a>
             <a href="#" className="text-white opacity-80 hover:opacity-100">
-              <LucideTwitter />
+              <FaXTwitter />
             </a>
           </div>
 
