@@ -1,30 +1,34 @@
 [
     {
-        "fullName": "Kohn Doe",
-        "subtitle": "senior developer",
-        "description": "Experienced in full-stack development and cloud computing.",
-        "image": "channels4_profile 1.png",
-        "button": "Contact"
+        "fullName": "David John",
+        "subtitle": "UI UX Designer . ⭐ 4.5 (2.5k Ratings)",
+        "description": "Premium UI designs for businesses, startups and personal brands",
+        "image": "alex.png",
+        "button": "Rate: #75k/hr",
+        "button2": "Lagos,Nigeria"
     },
     {
-        "fullName": "Maxwell Doe",
-        "subtitle": "senior developer",
+        "fullName": "Maxwell small",
+        "subtitle": "Experienced in Frontend and Backend development . ⭐ 4.5 (2.5k Ratings)",
         "description": "Experienced in full-stack development and cloud computing.",
         "image": "channels4_profile 1.png",
-        "button": "Contact"
+        "button": "Rate: #75k/hr",
+        "button2": "Lagos,Nigeria"
     },
     {
         "fullName": "Favour Doe",
-        "subtitle": "senior developer",
+        "subtitle": "UI UX Designer . ⭐ 4.5 (2.5k Ratings)",
         "description": "Experienced in full-stack development and cloud computing.",
-        "image": "channels4_profile 1.png",
-        "button": "Contact"
+        "image": "alex.png",
+       "button": "Rate: #75k/hr",
+        "button2": "Lagos,Nigeria"
     },
     {
-        "fullName": "Mosh Doe",
-        "subtitle": "senior developer",
-        "description": "Experienced in full-stack development and cloud computing.",
-        "image": "channels4_profile 1.png",
-        "button": "Contact"
+        "fullName": "Angeline Scott",
+        "subtitle": "Game Developer . ⭐ 4.5 (2.5k Ratings)",
+        "description": "Experienced in Game development and cloud computing.",
+        "image": "micheal.png",
+       "button": "Rate: #75k/hr",
+        "button2": "Lagos,Nigeria"
     }
 ]
