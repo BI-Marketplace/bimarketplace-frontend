@@ -31,13 +31,16 @@ export default function Home() {
       <div className="w-full flex flex-col justify-center items-center">
         <Header />
         <CarouselCard />
-        <div className=" w-[97%] flex justify-center items-center bg-red-800 py-50">
+        <div className=" w-[97%] grid grid-cols-2 py-20">
           {HireCardsData.map((card, index) => (
-            <div key={index} className="bg-blue-800 py-36 grid grid-cols-2">
+            <div
+              key={index}
+              className="w-full py-5 flex justify-center items-center"
+            >
               <HireCards
                 fullName={card.fullName}
                 subtitle={card.subtitle}
-                image=""
+                image={card.image}
                 description={card.description}
                 button={card.button}
               />
