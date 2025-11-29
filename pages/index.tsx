@@ -31,7 +31,38 @@ export default function Home() {
       <div className="w-full flex flex-col justify-center items-center">
         <Header />
         <CarouselCard />
-        <div className=" w-[97%] grid grid-cols-2 py-20">
+
+        <div className="w-[97%] flex flex-col items-center justify-center">
+          <div className="w-full flex flex-col justify-center items-start">
+           <h2 className="font-medium text-[20px] text-black font-inter">Hire Professionals</h2>
+            <div className="w-[90%] flex justify-center mt-7">
+            <button className="bg-[#008000] font-inter text-[14px] text-white px-5 py-2 rounded-full">
+              All
+            </button>
+            <button className="bg-[#E6F4EA] mx-3 font-inter text-[14px] text-black px-4 py-2 rounded-full">
+              web development
+            </button>
+            <button className="bg-[#E6F4EA] mx-3 font-inter text-[14px] text-black px-4 py-2 rounded-full">
+             UI UX
+            </button>
+            <button className="bg-[#E6F4EA] mx-3 font-inter text-[14px] text-black px-4 py-2 rounded-full">
+              Cyber Security
+            </button>
+            <button className="bg-[#E6F4EA] mx-3 font-inter text-[14px] text-black px-4 py-2 rounded-full">
+              Voice Acting
+            </button>
+            <button className="bg-[#E6F4EA] mx-3 font-inter text-[14px] text-black px-4 py-2 rounded-full">
+              Writing & Translation
+            </button>
+            <button className="bg-[#E6F4EA] mx-3 font-inter text-[14px] text-black px-4 py-2 rounded-full">
+             Electronic Gadge
+            </button>
+          
+          
+           
+          </div>
+          </div>
+          <div className=" w-full grid grid-cols-2 py-20">
           {HireCardsData.map((card, index) => (
             <div
               key={index}
@@ -43,9 +74,11 @@ export default function Home() {
                 image={card.image}
                 description={card.description}
                 button={card.button}
+                button2={card.button2}
               />
             </div>
           ))}
+        </div>
         </div>
         <Footer />
       </div>

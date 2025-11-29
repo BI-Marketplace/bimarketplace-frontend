@@ -5,33 +5,38 @@ interface HireCardsProps{
     fullName: string,
     subtitle: string,
     description: string,
-    button: string
+    button: string,
+    button2: string
 
 }
 
-export default function HireCards({image, fullName, subtitle, description, button}: HireCardsProps) {
+export default function HireCards({image, fullName, subtitle, description, button, button2}: HireCardsProps) {
     return (
-      <div className="">
-        <div className="w-[550px] h-[205px] border rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 bg-white flex justify-center items-center">
-          <img
+      <div className="w-[580px]">
+        <div className="w-full h-[205px] border rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 bg-white flex justify-center items-center">
+          <div className="w-[65%] h-full flex justify-center items-center">
+            <img
             src={image}
             alt=""
-            className="w-[150px] h-[150px] rounded-md mx-auto mb-4"
+            className="w-[164px] h-[164px] rounded-[15px] mx-auto mb-4"
           />
-
-          <h3 className="text-xl font-semibold text-center mb-2">{fullName}</h3>
-          <h4 className="text-md font-medium text-center text-gray-600 mb-4">
+            </div>
+           <div>
+            
+          <h3 className="text-[20px] font-medium font-inter mb-2 text-black ">{fullName}</h3>
+          <h4 className="text-[14px] font-inter font-medium text-black mb-2">
             {subtitle}
           </h4>
-          <p className="text-gray-700 text-center mb-6">{description}</p>
-          <div className="text-center">
-            <button className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors duration-300">
+          <p className="text-black mb-4">{description}</p>
+          <div className="w-full">
+            <button className="bg-[#D9D9D9] font-inter text-[14px] text-black px-3 py-2 rounded-full">
               {button}
             </button>
-            <button className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors duration-300">
-              {button}
+            <button className="bg-[#D9D9D9] mx-3 font-inter text-[14px] text-black px-4 py-2 rounded-full">
+              {button2}
             </button>
           </div>
+            </div> 
         </div>
       </div>
     );
