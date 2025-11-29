@@ -4,6 +4,8 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/blocks/Header";
 import CarouselCard from "@/components/blocks/CarouselCard";
+import HireCards from "@/components/blocks/HireCards";
+import HireCardsData from "@/HIreCards.json";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,6 +31,19 @@ export default function Home() {
       <div className="w-full flex flex-col justify-center items-center">
         <Header />
         <CarouselCard />
+        <div className=" w-[97%] flex justify-center items-center bg-red-800 py-50">
+          {HireCardsData.map((card, index) => (
+            <div key={index} className="bg-blue-800 py-36 grid grid-cols-2">
+              <HireCards
+                fullName={card.fullName}
+                subtitle={card.subtitle}
+                image=""
+                description={card.description}
+                button={card.button}
+              />
+            </div>
+          ))}
+        </div>
         <Footer />
       </div>
     </div>

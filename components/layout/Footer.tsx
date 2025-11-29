@@ -5,8 +5,10 @@ import React from 'react'
 const Footer: React.FC = () => {
   return (
     <>
+
     <div className="container w-full ">
       <footer className="bg-[#044904] text-white py-10 px-6 rounded-[12px] mb-5">
+
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
           <div>
             <h3 className="font-medium mb-3 font-inter text-[14px] text-center">
