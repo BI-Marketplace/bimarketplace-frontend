@@ -14,20 +14,20 @@ export default function HireCards({image, fullName, subtitle, description, butto
     return (
       <div className="w-[580px]">
         <div className="w-full h-[205px] border rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 bg-white flex justify-center items-center">
-          <div className="w-[65%] h-full flex justify-center items-center">
+          <div className="w-[50%] h-full flex justify-center items-center">
             <img
             src={image}
             alt=""
-            className="w-[164px] h-[164px] rounded-[15px] mx-auto mb-4"
+            className="w-[140px] h-[140px] rounded-[15px] mx-auto mb-4"
           />
             </div>
            <div>
             
-          <h3 className="text-[20px] font-medium font-inter mb-2 text-black ">{fullName}</h3>
+          <h3 className="text-[16px] font-medium font-inter mb-2 text-black ">{fullName}</h3>
           <h4 className="text-[14px] font-inter font-medium text-black mb-2">
             {subtitle}
           </h4>
-          <p className="text-black mb-4">{description}</p>
+          <p className="text-black text-[12px] mb-4">{description}</p>
           <div className="w-full">
             <button className="bg-[#D9D9D9] font-inter text-[14px] text-black px-3 py-2 rounded-full">
               {button}
