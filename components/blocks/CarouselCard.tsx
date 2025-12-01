@@ -10,16 +10,20 @@ import {
 
 export default function CarouselDemo() {
   return (
-    <div className="w-full px-4">
+    <div className="w-full px-4 sm:px-20 pt-5">
       <div className="relative w-full">
         <Carousel className="w-full">
           <CarouselContent>
             {Array.from({ length: 5 }).map((_, index) => (
               <CarouselItem key={index}>
                 <div className="p-2">
-                  <Card className="h-70 md:h-70"> {/* reduced height */}
+                  <Card className="h-70 md:h-70">
+                    {" "}
+                    {/* reduced height */}
                     <CardContent className="flex items-center justify-center p-6">
-                      <span className="text-4xl font-semibold">{index + 1}</span>
+                      <span className="text-4xl font-semibold">
+                        {index + 1}
+                      </span>
                     </CardContent>
                   </Card>
                 </div>
