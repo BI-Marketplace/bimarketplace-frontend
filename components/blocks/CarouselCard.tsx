@@ -1,12 +1,12 @@
 import * as React from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "../ui/carousel";
+} from "@/components/ui/carousel";
 
 import type { CarouselApi } from "@/components/ui/carousel";
 // import Autoplay from "embla-carousel-autoplay";
@@ -40,7 +40,7 @@ export default function CarouselDemo() {
   //END ADD
 
   return (
-    <div className="w-full px-4">
+    <div className="w-full px-5 my-5">
       <div className="relative w-full">
         {/* AUTO-SLIDE (5s per slide) */}
         <Carousel
@@ -52,17 +52,23 @@ export default function CarouselDemo() {
           <CarouselContent>
             {slides.map((item, index) => (
               <CarouselItem key={index}>
-                <div className="p-2">
-                  <Card className="h-70 md:h-70">
-                    {" "}
-                    {/* reduced height */}
-                    <CardContent className="flex items-center justify-center p-6">
-                      <span className="text-4xl font-semibold">
-                        {index + 1}
-                      </span>
-                    </CardContent>
-                  </Card>
-                </div>
+                <Card className="relative w-full h-[350px] md:h-[420px] overflow-hidden rounded-xl">
+                  {/* Background Image */}
+                  <div
+                    className="absolute inset-0 bg-cover bg-center transition-opacity duration-700 ease-in-out"
+                    style={{ backgroundImage: `url(${item.image.src})` }}
+                  />
+
+                  {/* Dark / Gradient Overlay */}
+                  <div className="absolute inset-0 bg-black/40 md:bg-black/30" />
+
+                  {/* Text Overlay */}
+                  <div className="absolute bottom-6 left-6 text-white drop-shadow-lg">
+                    <h2 className="text-xl md:text-xl font-medium">
+                      {item.text}
+                    </h2>
+                  </div>
+                </Card>
               </CarouselItem>
             ))}
           </CarouselContent>
