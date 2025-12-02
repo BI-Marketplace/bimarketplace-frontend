@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`${inter.className} w-full bg-white backdrop-blur-md border-b border-gray-200 shadow-md px-4 sm:px-6 py-4 flex items-center justify-between relative`}
+      className={`${inter.className} w-full bg-white backdrop-blur-md border-b border-gray-200 shadow-md px-4 sm:px-12 py-4 flex items-center justify-between relative`}
     >
       <div className="flex lg:w-auto items-center gap-4 w-full justify-between">
         <Image
