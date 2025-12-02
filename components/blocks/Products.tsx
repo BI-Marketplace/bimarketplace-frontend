@@ -46,7 +46,7 @@ export default function Products() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [loading, setLoading] = useState(false);
 
-  // Simulate loading on category switch
+  // Simulating loading
   useEffect(() => {
     setLoading(true);
     const timer = setTimeout(() => setLoading(false), 800);
@@ -60,13 +60,11 @@ export default function Products() {
 
   return (
     <div className="p-4 sm:p-6 px-10">
-      {/* Title */}
       <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
         Products
       </h2>
-
-      {/* Categories */}
-      {/* <div className="flex gap-2 sm:gap-3 overflow-x-auto pb-3 scrollbar-hide mb-6">
+      =
+      <div className="flex gap-2 sm:gap-3 overflow-x-auto pb-3 scrollbar-hide mb-6">
         {categories.map((cat) => (
           <button
             key={cat}
@@ -81,11 +79,8 @@ export default function Products() {
             {cat}
           </button>
         ))}
-      </div> */}
-
-      {/* Product Grid */}
+      </div>
       <div className="min-h-[280px] grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
-        {/* Skeleton Loader */}
         {loading &&
           [...Array(4)].map((_, i) => (
             <div
@@ -94,7 +89,6 @@ export default function Products() {
             ></div>
           ))}
 
-        {/* Empty State */}
         {!loading && filteredProducts.length === 0 && (
           <div className="col-span-full flex justify-center items-center py-14">
             <p className="text-gray-500 text-center text-sm sm:text-base">
@@ -103,7 +97,6 @@ export default function Products() {
           </div>
         )}
 
-        {/* Product Cards */}
         {!loading &&
           filteredProducts.map((product) => (
             <ProductCard

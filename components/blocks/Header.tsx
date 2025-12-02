@@ -71,7 +71,7 @@ export default function Header() {
             {/* Profile Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <button className="flex items-center rounded-full p-1 hover:bg-gray-100 transition">
+                <button className=" hidden sm:flex items-center  rounded-full p-1 hover:bg-gray-100 transition">
                   <Avatar className="h-10 w-10">
                     <AvatarImage src="/images/avatar.png" />
                     <AvatarFallback>DC</AvatarFallback>

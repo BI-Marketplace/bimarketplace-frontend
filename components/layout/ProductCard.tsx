@@ -25,12 +25,10 @@ export default function ProductCard({
       onClick={onClick}
       className="bg-white rounded-lg shadow hover:shadow-md transition p-4 cursor-pointer w-full max-w-[220px] flex flex-col"
     >
-      {/* Product Image */}
       <div className="w-full h-36 rounded-md overflow-hidden">
         <img src={image} alt={name} className="w-full h-full object-cover" />
       </div>
 
-      {/* Product Info */}
       <div className="mt-3 flex-1">
         <h3 className="font-semibold text-sm text-gray-900 ">{name}</h3>
 
@@ -40,7 +38,6 @@ export default function ProductCard({
 
         <p className="text-gray-600 text-xs mt-1 line-clamp-2">{description}</p>
 
-        {/* Rating */}
         <div className="flex items-center gap-1 mt-1">
           {Array.from({ length: 5 }).map((_, i) => (
             <Star
@@ -54,7 +51,6 @@ export default function ProductCard({
         </div>
       </div>
 
-      {/* Button */}
       <button
         onClick={(e) => {
           e.stopPropagation();
