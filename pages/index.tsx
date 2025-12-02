@@ -6,7 +6,7 @@ import CarouselCard from "@/components/blocks/CarouselCard";
 import { useState } from "react";
 import Products from "@/components/blocks/Products";
 import HireCards from "@/components/blocks/HireCards";
-
+import Trending from "../components/blocks/Trending";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -50,6 +50,7 @@ export default function Home() {
           button="map"
           button2="gap"
         /> */}
+        <Trending />
       </main>
 
       <Footer />
