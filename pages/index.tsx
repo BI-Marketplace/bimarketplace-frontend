@@ -34,8 +34,8 @@ export default function Home() {
         <HireProfessionals />
 
         <Trending />
-        <Footer />
       </main>
+        <Footer />
     </div>
   );
 }

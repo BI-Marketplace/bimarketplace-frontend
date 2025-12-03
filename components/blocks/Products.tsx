@@ -31,6 +31,24 @@ export const dummyProducts = [
     rating: 4,
     category: "Accessories",
   },
+  {
+    id: 4,
+    image: "/images/product3.jpg",
+    name: "USB-C Fast Charger",
+    price: 5000,
+    description: "25W fast charger for all USB-C devices.",
+    rating: 4,
+    category: "Accessories",
+  },
+  {
+    id: 5,
+    image: "/images/product3.jpg",
+    name: "USB-C Fast Charger",
+    price: 5000,
+    description: "25W fast charger for all USB-C devices.",
+    rating: 4,
+    category: "Accessories",
+  }
 ];
 
 const categories = [
@@ -63,24 +81,24 @@ export default function Products() {
       <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
         Products
       </h2>
-      =
+ 
       <div className="flex gap-2 sm:gap-3 overflow-x-auto pb-3 scrollbar-hide mb-6">
         {categories.map((cat) => (
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
-            className={`px-4 py-2 rounded-full text-sm font-semibold transition whitespace-nowrap
+            className={`px-4 py-2 rounded-full text-sm  transition whitespace-nowrap
               ${
                 activeCategory === cat
-                  ? "bg-green-600 text-white shadow"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                  ? "bg-green-600 text-white shadow font-bold"
+                  : "bg-gray-100 text-gray-700 hover:bg-[#E6F4EA]"
               }`}
           >
             {cat}
           </button>
         ))}
       </div>
-      <div className="min-h-[280px] grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+      <div className="min-h-[280px] grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap- sm:gap-6">
         {loading &&
           [...Array(4)].map((_, i) => (
             <div

@@ -1,5 +1,5 @@
 import React from "react";
-import { Star } from "lucide-react";
+import { Star, UserCircle } from "lucide-react";
 
 interface ProductCardProps {
   image: string;
@@ -23,7 +23,7 @@ export default function ProductCard({
   return (
     <div
       onClick={onClick}
-      className="bg-white rounded-lg shadow hover:shadow-md transition p-4 cursor-pointer w-full max-w-[220px] flex flex-col"
+      className="bg-white rounded-lg shadow hover:shadow-lg transition p-4 cursor-pointer w-full max-w-[220px] flex flex-col"
     >
       <div className="w-full h-36 rounded-md overflow-hidden">
         <img src={image} alt={name} className="w-full h-full object-cover" />
@@ -56,9 +56,13 @@ export default function ProductCard({
           e.stopPropagation();
           onAddToCart?.();
         }}
-        className="mt-3 w-full bg-green-600 items-center hover:bg-green-500 text-white py-2 rounded-full text-sm font-medium transition"
+        className="mt-3 w-full bg-gray-100 text-gray-700 flex justify-center items-center  py-2 rounded-full text-sm font-medium transition "
       >
-        TechMart NG
+        <span className="flex items-center gap-2">
+
+         <UserCircle size={14}/>
+        <span>TechMart NG</span>
+        </span>
       </button>
     </div>
   );

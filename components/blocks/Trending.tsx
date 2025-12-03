@@ -38,7 +38,7 @@ function Trending({}: Props) {
         Trending on Zikbi
       </h2>
 
-      <div className="min-h-[280px] px-10 grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+      <div className="min-h-[280px] grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap- sm:gap-6">
         {dummyProducts.map((product) => (
           <ProductCard
             key={product.id}
