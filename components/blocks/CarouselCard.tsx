@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/carousel";
 
 import type { CarouselApi } from "@/components/ui/carousel";
-// import Autoplay from "embla-carousel-autoplay";
+import Autoplay from "embla-carousel-autoplay";
 
 import img1 from "@/public/assets/images/corousel_item1.jpg";
 import img2 from "@/public/assets/images/corousel_item2.jpg";
@@ -47,7 +47,7 @@ export default function CarouselDemo() {
           className="w-full"
           opts={{ loop: true, duration: 50 }}
           setApi={setApi}
-          // plugins={[Autoplay({ delay: 5000 })]}
+          plugins={[Autoplay({ delay: 5000 })]}
         >
           <CarouselContent>
             {slides.map((item, index) => (

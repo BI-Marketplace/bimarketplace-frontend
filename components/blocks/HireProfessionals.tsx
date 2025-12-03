@@ -1,9 +1,10 @@
 import HireCardsData from "@/HIreCards.json";
 import HireCards from "@/components/blocks/HireCards";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function HireProfessionals() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [loading, setLoading] = useState(false);
   const categories = [
     "All",
     "Web Development",
@@ -18,13 +19,20 @@ export default function HireProfessionals() {
       ? HireCardsData
       : HireCardsData.filter((card) => card.category === activeCategory);
 
+  useEffect(() => {
+    setLoading(true);
+    const timer = setTimeout(() => setLoading(false), 3100);
+    return () => clearTimeout(timer);
+  }, [activeCategory]);
+
+
   return (
     <section className="w-full flex flex-col items-start">
       <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 px-4">
         Hire Professionals
       </h2>
 
-      <div className="flex mt-6 mb-10 overflow-x-auto scrollbar-hide px-4 w-full">
+      <div className="flex mt-6 mb-10 overflow-x-auto scrollbar-hide w-full">
         <button
           className={`cursor-pointer font-inter text-[14px] px-5 py-2 rounded-full  ${
             activeCategory === "All"

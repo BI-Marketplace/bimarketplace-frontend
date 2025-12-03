@@ -1,4 +1,142 @@
 [
+    {
+        "fullName": "David John",
+        "subtitle": "UI UX Designer . ⭐ 4.5 (2.5k Ratings)",
+        "description": "Premium UI designs for businesses, startups and personal brands",
+        "image": "alex.png",
+        "button": "Rate: #75k/hr",
+        "button2": "Lagos,Nigeria",
+        "category": "Web Development"
+    },
+    {
+      "fullName": "Maxwell small",
+      "subtitle": "fullStack development. ⭐ 4.5 (2.5k Ratings)",
+      "description": "Experienced in full-stack development and cloud computing.",
+      "image": "channels4_profile 1.png",
+      "button": "Rate: #75k/hr",
+      "button2": "Lagos,Nigeria",
+      "category": "Cyber Security"
+    },
+    {
+      "fullName": "Favour Doe",
+      "subtitle": "UI UX Designer . ⭐ 4.5 (2.5k Ratings)",
+      "description": "Experienced in full-stack development and cloud computing.",
+      "image": "alex.png",
+      "button": "Rate: #75k/hr",
+      "button2": "Lagos,Nigeria",
+      "category": "Web Development"
+    },
+
+    {
+      "fullName": "Favour Doe",
+      "subtitle": "UI UX Designer . ⭐ 4.5 (2.5k Ratings)",
+      "description": "Experienced in full-stack development and cloud computing.",
+      "image": "alex.png",
+      "button": "Rate: #75k/hr",
+      "button2": "Lagos,Nigeria",
+      "category": "Web Development"
+    },
+    {
+      "fullName": "Favour Doe",
+      "subtitle": "UI UX Designer . ⭐ 4.5 (2.5k Ratings)",
+      "description": "Experienced in full-stack development and cloud computing.",
+      "image": "alex.png",
+      "button": "Rate: #75k/hr",
+      "button2": "Lagos,Nigeria",
+      "category": "Cyber Security"
+    },
+    {
+      "fullName": "Favour Doe",
+      "subtitle": "UI UX Designer . ⭐ 4.5 (2.5k Ratings)",
+      "description": "Experienced in full-stack development and cloud computing.",
+      "image": "alex.png",
+      "button": "Rate: #75k/hr",
+      "button2": "Lagos,Nigeria",
+      "category": "Writing & Translation"
+    },
+    {
+      "fullName": "Favour Doe",
+      "subtitle": "UI UX Designer . ⭐ 4.5 (2.5k Ratings)",
+      "description": "Experienced in full-stack development and cloud computing.",
+      "image": "alex.png",
+      "button": "Rate: #75k/hr",
+      "button2": "Lagos,Nigeria",
+      "category": "Writing & Translation"
+    },
+    {
+      "fullName": "Favour Doe",
+      "subtitle": "UI UX Designer . ⭐ 4.5 (2.5k Ratings)",
+      "description": "Experienced in full-stack development and cloud computing.",
+      "image": "alex.png",
+      "button": "Rate: #75k/hr",
+      "button2": "Lagos,Nigeria",
+      "category": "Writing & Translation"
+    },
+    {
+      "fullName": "Favour Doe",
+      "subtitle": "UI UX Designer . ⭐ 4.5 (2.5k Ratings)",
+      "description": "Experienced in full-stack development and cloud computing.",
+      "image": "alex.png",
+      "button": "Rate: #75k/hr",
+      "button2": "Lagos,Nigeria",
+      "category": "UI UX"
+    },
+    {
+      "fullName": "Favour Doe",
+      "subtitle": "UI UX Designer . ⭐ 4.5 (2.5k Ratings)",
+      "description": "Experienced in full-stack development and cloud computing.",
+      "image": "alex.png",
+      "button": "Rate: #75k/hr",
+      "button2": "Lagos,Nigeria",
+      "category": "Electronic Gadgets"
+    },
+    {
+      "fullName": "Angeline Scott",
+      "subtitle": "Game Developer . ⭐ 4.5 (2.5k Ratings)",
+      "description": "Experienced in Game development and cloud computing.",
+      "image": "micheal.png",
+      "button": "Rate: #75k/hr",
+      "button2": "Lagos,Nigeria",
+      "category": "UI UX"
+    },
+    {
+      "fullName": "Angeline Scott",
+      "subtitle": "Game Developer . ⭐ 4.5 (2.5k Ratings)",
+      "description": "Experienced in Game development and cloud computing.",
+      "image": "micheal.png",
+      "button": "Rate: #75k/hr",
+      "button2": "Lagos,Nigeria",
+      "category": "Electronic Gadgets"
+    },
+    {
+      "fullName": "Angeline Scott",
+      "subtitle": "Game Developer . ⭐ 4.5 (2.5k Ratings)",
+      "description": "Experienced in Game development and cloud computing.",
+      "image": "micheal.png",
+      "button": "Rate: #75k/hr",
+      "button2": "Lagos,Nigeria",
+      "category": "Web Development"
+    },
+    {
+      "fullName": "Angeline Scott",
+      "subtitle": "Game Developer . ⭐ 4.5 (2.5k Ratings)",
+      "description": "Experienced in Game development and cloud computing.",
+      "image": "micheal.png",
+      "button": "Rate: #75k/hr",
+      "button2": "Lagos,Nigeria",
+      "category": "UI UX"
+    },
+    {
+      "fullName": "Angeline Scott",
+      "subtitle": "Game Developer . ⭐ 4.5 (2.5k Ratings)",
+      "description": "Experienced in Game development and cloud computing.",
+      "image": "micheal.png",
+      "button": "Rate: #75k/hr",
+      "button2": "Lagos,Nigeria",
+      "category": "Cyber Security"
+    }
+]
+
 
   {
     "fullName": "Maxwell Small",
@@ -37,3 +175,4 @@
     "category": "Frontend Development"
   }
 ]
+
