@@ -126,6 +126,7 @@ export default function Header() {
             <Dialog open={open} onOpenChange={setOpen}>
               <DialogContent className="w-[900px] max-w-none p-0 rounded-xl overflow-hidden bg-white">
                 <div className="grid grid-cols-1 md:grid-cols-2 h-full">
+                  {/* LEFT SIDE */}
                   <div className="bg-[#E6F4EA] p-10 flex flex-col justify-between">
                     <div>
                       <h2 className="text-[16px] text-black font-semibold mb-4">
@@ -149,6 +150,7 @@ export default function Header() {
 
                   {/* RIGHT SIDE */}
                   <div className="p-10 flex flex-col justify-between">
+                    {/* ======================== MAIN STEP ======================== */}
                     {step === "main" && (
                       <div>
                         <h2 className="text-[16px] text-black font-semibold mb-6">
@@ -170,10 +172,48 @@ export default function Header() {
                       </div>
                     )}
 
+                    {/* ======================== EMAIL STEP ======================== */}
                     {step === "email" && (
                       <div>
-                        <h2 className="text-2xl font-semibold mb-4">
-                          Sign up with Email
+                        <h2 className="text-[16px] text-black font-semibold mb-6">
+                          What best describes you the most?
+                        </h2>
+
+                        <button
+                          onClick={() => setStep("buyer")}
+                          className="w-full gap-2 border cursor-pointer text-[14px] text-black rounded-lg py-3 flex items-center justify-center mb-4"
+                        >
+                          Buyer
+                        </button>
+
+                        <button
+                          onClick={() => setStep("seller")}
+                          className="w-full cursor-pointer text-[14px] text-black border rounded-lg py-3 flex items-center gap-2 justify-center mb-4"
+                        >
+                          Seller
+                        </button>
+
+                        <button
+                          onClick={() => setStep("freelancer")}
+                          className="w-full cursor-pointer text-[14px] text-black border rounded-lg py-3 flex items-center gap-2 justify-center"
+                        >
+                          Freelancer
+                        </button>
+
+                        <button
+                          className="text-sm mt-4 underline"
+                          onClick={() => setStep("main")}
+                        >
+                          ← Back
+                        </button>
+                      </div>
+                    )}
+
+                    {/* ======================== BUYER STEP ======================== */}
+                    {step === "buyer" && (
+                      <div>
+                        <h2 className="text-[16px] text-black font-semibold mb-6">
+                          Buyer Registration
                         </h2>
 
                         <input
@@ -188,13 +228,66 @@ export default function Header() {
 
                         <button
                           className="text-sm mt-4 underline"
-                          onClick={() => setStep("main")}
+                          onClick={() => setStep("email")}
                         >
                           ← Back
                         </button>
                       </div>
                     )}
 
+                    {/* ======================== SELLER STEP ======================== */}
+                    {step === "seller" && (
+                      <div>
+                        <h2 className="text-[16px] text-black font-semibold mb-6">
+                          Seller Registration
+                        </h2>
+
+                        <input
+                          type="text"
+                          placeholder="Business Name"
+                          className="w-full border rounded-lg p-3 mb-4"
+                        />
+
+                        <button className="w-full bg-black text-white rounded-lg py-3">
+                          Continue
+                        </button>
+
+                        <button
+                          className="text-sm mt-4 underline"
+                          onClick={() => setStep("email")}
+                        >
+                          ← Back
+                        </button>
+                      </div>
+                    )}
+
+                    {/* ======================== FREELANCER STEP ======================== */}
+                    {step === "freelancer" && (
+                      <div>
+                        <h2 className="text-[16px] text-black font-semibold mb-6">
+                          Freelancer Registration
+                        </h2>
+
+                        <input
+                          type="text"
+                          placeholder="Full Name"
+                          className="w-full border rounded-lg p-3 mb-4"
+                        />
+
+                        <button className="w-full bg-black text-white rounded-lg py-3">
+                          Continue
+                        </button>
+
+                        <button
+                          className="text-sm mt-4 underline"
+                          onClick={() => setStep("email")}
+                        >
+                          ← Back
+                        </button>
+                      </div>
+                    )}
+
+                    {/* FOOTER */}
                     <p className="text-xs text-gray-500 leading-relaxed mt-6">
                       By continuing, you agree to our{" "}
                       <span className="underline">Terms & Conditions</span>,
