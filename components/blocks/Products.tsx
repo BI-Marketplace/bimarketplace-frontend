@@ -48,7 +48,53 @@ export const dummyProducts = [
     description: "25W fast charger for all USB-C devices.",
     rating: 4,
     category: "Accessories",
-  }
+  },
+  {
+  id: 6,
+  image: "/images/product4.jpg",
+  name: "Bluetooth Speaker",
+  price: 18000,
+  description: "Portable speaker with deep bass and long battery life.",
+  rating: 5,
+  category: "Audio",
+},
+{
+  id: 7,
+  image: "/images/product5.jpg",
+  name: "Gaming Mouse",
+  price: 12000,
+  description: "Ergonomic design with RGB lighting and fast response time.",
+  rating: 4,
+  category: "Accessories",
+},
+{
+  id: 8,
+  image: "/images/product6.jpg",
+  name: "Portable Power Bank",
+  price: 10000,
+  description: "10,000mAh fast-charging power bank with dual USB ports.",
+  rating: 4,
+  category: "Gadgets",
+},
+{
+  id: 9,
+  image: "/images/product7.jpg",
+  name: "Wireless Keyboard",
+  price: 17000,
+  description: "Slim wireless keyboard with long battery life and silent keys.",
+  rating: 5,
+  category: "Accessories",
+},
+{
+  id: 10,
+  image: "/images/product8.jpg",
+  name: "HD Web Camera",
+  price: 22000,
+  description: "1080p HD webcam with autofocus for streaming and meetings.",
+  rating: 4,
+  category: "Computer",
+}
+
 ];
 
 const categories = [
