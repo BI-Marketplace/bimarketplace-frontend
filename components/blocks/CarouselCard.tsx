@@ -40,7 +40,7 @@ export default function CarouselDemo() {
   //END ADD
 
   return (
-    <div className="w-full px-5 my-5">
+    <div className="w-full px-5 mt-5">
       <div className="relative w-full">
         {/* AUTO-SLIDE (5s per slide) */}
         <Carousel
@@ -75,7 +75,7 @@ export default function CarouselDemo() {
 
           {/* Custom Nav Buttons */}
           <div className="absolute bottom-10 right-20 flex gap-3 z-10">
-            <CarouselPrevious className="bg-white/80 p-3 rounded-full shadow-md hover:bg-white" />
+            <CarouselPrevious className="bg-white p-3 rounded-full shadow-md hover:bg-white/80 text-black" />
 
             {/*ADDED: Dot indicators */}
             <div className="flex items-center gap-2">
@@ -89,7 +89,7 @@ export default function CarouselDemo() {
               ))}
             </div>
 
-            <CarouselNext className="bg-white/80 p-3 rounded-full shadow-md hover:bg-white" />
+            <CarouselNext className="bg-white p-3 rounded-full shadow-md hover:bg-white/80 text-black" />
           </div>
         </Carousel>
       </div>
