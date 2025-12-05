@@ -2,7 +2,15 @@
 
 import React from "react";
 import Link from "next/link";
-import { SearchIcon, Bell, ShoppingCart, Menu, X, User } from "lucide-react";
+import {
+  SearchIcon,
+  Bell,
+  ShoppingCart,
+  Menu,
+  X,
+  User,
+  Check,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -46,7 +54,7 @@ export default function Header() {
             <nav className="hidden md:flex gap-4 ml-8">
               {[
                 { label: "Home", href: "/" },
-                { label: "Explore", href: "/explore" },
+                { label: "Explore", href: "/explore/product" },
                 { label: "Services", href: "/services" },
                 { label: "Messages", href: "/messages" },
               ].map((item) => (
@@ -126,81 +134,111 @@ export default function Header() {
             </DropdownMenu>
 
             <Dialog open={open} onOpenChange={setOpen}>
-              <DialogContent className="w-[900px] max-w-none p-0 rounded-xl overflow-hidden bg-white">
+              <DialogContent className=" w-full max-w-xl sm:max-w-2xl   p-0 rounded-xl overflow-hidden bg-white   min-h-[550px] md:min-h-2/3">
                 <div className="grid grid-cols-1 md:grid-cols-2 h-full">
                   {/* LEFT SIDE */}
-                  <div className="bg-[#E6F4EA] p-10 flex flex-col justify-between">
+                  <div className="bg-[#E6F4EA] py-10 pl-10 flex flex-col justify-between gap-10">
                     <div>
-                      <h2 className="text-[16px] text-black font-semibold mb-4">
+                      <h2 className="text-[15px] font-semibold text-black mb-3">
                         The marketplace built for everyone
                       </h2>
 
-                      <ul className="space-y-2 text-sm text-gray-700">
-                        <li>• Buy what you need</li>
-                        <li>• Sell what you have</li>
-                        <li>• Hire who you trust</li>
-                        <li>• All from the comfort of your home</li>
+                      <ul className="space-y-1.5 text-xs text-gray-700">
+                        <li className="flex items-center gap-2">
+                          <Check size={12} color="green" />{" "}
+                          <span className="text-gray-800 text-xs font-extralight">
+                            Buy what you need
+                          </span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <Check size={12} color="green" />{" "}
+                          <span className="text-gray-800 text-xs font-extralight">
+                            Sell what you have
+                          </span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <Check size={12} color="green" />{" "}
+                          <span className="text-gray-800 text-xs font-extralight">
+                            Hire who you trust
+                          </span>
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <Check size={12} color="green" />{" "}
+                          <span className="text-gray-800 text-xs font-extralight">
+                            From the comfort of your home
+                          </span>
+                        </li>
                       </ul>
                     </div>
 
                     <img
-                      src="/alex.png"
+                      src="pana.png"
                       alt="Marketplace"
-                      className="w-full mt-6"
+                      className="w-full mt-6 max-h-44 object-contain"
                     />
                   </div>
 
-                  <div className="p-10 flex flex-col justify-between">
+                  {/* RIGHT SIDE */}
+                  <div className="p-6 flex flex-col justify-between text-black">
                     {step === "main" && (
-                      <div>
-                        <h2 className="text-[16px] text-black font-semibold mb-6">
-                          Create a new account
-                        </h2>
+                      <div className="gap-10 grid">
+                        <div>
+                          <h2 className="text-[15px] text-sm font-semibold text-black ">
+                            Create a new account
+                          </h2>
 
-                        <button className="w-full gap-2 border cursor-pointer text-[14px] text-black rounded-lg py-3 flex items-center justify-center mb-4">
-                          <FcGoogle className="text-[20px]" />
-                          Continue with Google
-                        </button>
+                          <p className="text-black text-[10px] font-extralight mb-3">
+                            Already have an account?{" "}
+                            <span className="text-[#008000]">Login</span>
+                          </p>
+                        </div>
 
-                        <button
-                          onClick={() => setStep("email")}
-                          className="w-full cursor-pointer text-[14px] text-black border rounded-lg py-3 flex items-center gap-2 justify-center"
-                        >
-                          <Mail size={18} />
-                          Continue with Email
-                        </button>
+                        <div>
+                          <button className="w-full border rounded-lg py-2.5 text-sm flex gap-2 justify-center mb-3 text-black">
+                            <FcGoogle className="text-[18px]" />
+                            Continue with Google
+                          </button>
+
+                          <button
+                            onClick={() => setStep("email")}
+                            className="w-full border rounded-lg py-2.5 text-sm flex gap-2 justify-center text-black"
+                          >
+                            <Mail size={16} />
+                            Continue with Email
+                          </button>
+                        </div>
                       </div>
                     )}
 
                     {step === "email" && (
                       <div>
-                        <h2 className="text-[16px] text-black font-semibold mb-6">
-                          What best describes you the most?
+                        <h2 className="text-[15px] font-semibold text-black mb-4">
+                          What best describes you?
                         </h2>
 
                         <button
                           onClick={() => setStep("buyer")}
-                          className="w-full gap-2 border cursor-pointer text-[14px] text-black rounded-lg py-3 flex items-center justify-center mb-4"
+                          className="w-full border rounded-lg py-2.5 text-sm mb-2.5 text-black"
                         >
                           Buyer
                         </button>
 
                         <button
                           onClick={() => setStep("seller")}
-                          className="w-full cursor-pointer text-[14px] text-black border rounded-lg py-3 flex items-center gap-2 justify-center mb-4"
+                          className="w-full border rounded-lg py-2.5 text-sm mb-2.5 text-black"
                         >
                           Seller
                         </button>
 
                         <button
                           onClick={() => setStep("freelancer")}
-                          className="w-full cursor-pointer text-[14px] text-black border rounded-lg py-3 flex items-center gap-2 justify-center"
+                          className="w-full border rounded-lg py-2.5 text-sm text-black"
                         >
                           Freelancer
                         </button>
 
                         <button
-                          className="text-sm mt-4 underline"
+                          className="text-xs mt-3 underline text-black"
                           onClick={() => setStep("main")}
                         >
                           ← Back
@@ -209,67 +247,42 @@ export default function Header() {
                     )}
 
                     {step === "buyer" && (
-                      <div className="space-y-5">
+                      <div>
+                        <h2 className="text-[15px] font-semibold text-black mb-4">
+                          Buyer Registration
+                        </h2>
+
+                        <input
+                          type="email"
+                          placeholder="Enter your email"
+                          className="w-full border rounded-lg p-2.5 text-sm mb-3 text-black placeholder:text-gray-500"
+                        />
+
+                        <button className="w-full bg-black text-white rounded-lg py-2.5 text-sm">
+                          Continue
+                        </button>
+
                         <button
+                          className="text-xs mt-3 underline text-black"
                           onClick={() => setStep("email")}
                           className="flex items-center text-sm text-gray-600 mb-2"
                         >
                           ← Back
                         </button>
 
-                        <div>
-                          <h2 className="text-[18px] font-semibold text-black">
-                            Create your buyer account
-                          </h2>
-                          <p className="text-sm text-gray-600">
-                            Buy products and hire freelancers in one place.
-                          </p>
-                        </div>
+                    {step === "seller" && (
+                      <div>
+                        <h2 className="text-[15px] font-semibold text-black mb-4">
+                          Seller Registration
+                        </h2>
 
-                        <div className="flex flex-col gap-1">
-                          <label className="text-sm text-gray-700">
-                            Email Address
-                          </label>
-                          <input
-                            type="email"
-                            placeholder="e.g yourname@gmail.com"
-                            className="w-full border rounded-lg p-3 text-sm"
-                          />
-                        </div>
+                        <input
+                          type="text"
+                          placeholder="Business Name"
+                          className="w-full border rounded-lg p-2.5 text-sm mb-3 text-black placeholder:text-gray-500"
+                        />
 
-                        <div className="flex flex-col gap-1">
-                          <label className="text-sm text-gray-700">
-                            Password
-                          </label>
-
-                          <div className="relative">
-                            <input
-                              type="password"
-                              className="w-full border rounded-lg p-3 text-sm pr-10"
-                              placeholder="••••••••"
-                            />
-                            <span className="absolute right-3 top-3 cursor-pointer text-gray-500">
-                              👁️
-                            </span>
-                          </div>
-                        </div>
-
-                        <div className="text-xs text-gray-600 space-y-2">
-                          <p className="flex items-center gap-2">
-                            ✔ At least 8 characters
-                          </p>
-                          <p className="flex items-center gap-2">
-                            ✔ At least 1 uppercase letter
-                          </p>
-                          <p className="flex items-center gap-2">
-                            ✔ At least 1 lowercase letter
-                          </p>
-                          <p className="flex items-center gap-2">
-                            ✔ At least 1 number
-                          </p>
-                        </div>
-
-                        <button className="w-full bg-gray-200 text-gray-500 rounded-lg py-3 mt-2">
+                        <button className="w-full bg-black text-white rounded-lg py-2.5 text-sm">
                           Continue
                         </button>
                       </div>
@@ -277,6 +290,7 @@ export default function Header() {
                     {step === "seller" && (
                       <div className="space-y-5">
                         <button
+                          className="text-xs mt-3 underline text-black"
                           onClick={() => setStep("email")}
                           className="flex items-center text-sm text-gray-600 mb-2"
                         >
@@ -340,9 +354,25 @@ export default function Header() {
                         </button>
                       </div>
                     )}
+
                     {step === "freelancer" && (
-                      <div className="space-y-5">
+                      <div>
+                        <h2 className="text-[15px] font-semibold text-black mb-4">
+                          Freelancer Registration
+                        </h2>
+
+                        <input
+                          type="text"
+                          placeholder="Full Name"
+                          className="w-full border rounded-lg p-2.5 text-sm mb-3 text-black placeholder:text-gray-500"
+                        />
+
+                        <button className="w-full bg-black text-white rounded-lg py-2.5 text-sm">
+                          Continue
+                        </button>
+
                         <button
+                          className="text-xs mt-3 underline text-black"
                           onClick={() => setStep("email")}
                           className="flex items-center text-sm text-gray-600 mb-2"
                         >
@@ -412,11 +442,21 @@ export default function Header() {
                       </div>
                     )}
 
-                    <p className="text-xs text-gray-500 leading-relaxed mt-6">
+                    <p className="text-[10px] text-gray-600 leading-relaxed mt-4">
                       By continuing, you agree to our{" "}
-                      <span className="underline">Terms & Conditions</span>,
-                      <span className="underline"> Privacy Policy</span>, and{" "}
-                      <span className="underline">User Guidelines</span>.
+                      <span className="underline decoration-[#008000]">
+                        Terms & Conditions
+                      </span>
+                      ,{" "}
+                      <span className="underline decoration-[#008000]">
+                        Privacy Policy
+                      </span>
+                      , and{" "}
+                      <span className="underline decoration-[#008000]">
+                        User Guidelines
+                      </span>
+                      . Please make sure you understand how your data is used
+                      and your responsibilities when using Zikbi.
                     </p>
                   </div>
                 </div>
