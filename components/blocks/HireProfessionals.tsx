@@ -26,6 +26,9 @@ export default function HireProfessionals() {
   }, [activeCategory]);
 
 
+ 
+
+  // const filterProducts = activeCategory === "All" ? HireCardsData : HireCardsData.filt
   return (
     
     <section className="w-full flex flex-col items-start">

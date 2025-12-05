@@ -21,11 +21,13 @@ import {
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Mail } from "lucide-react";
+import { FaEye, FaEyeSlash } from "react-icons/fa6";
 // import { Button } from "@/components/ui/button";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState("main");
+  const [showPassword, setShowPassword] = useState(false)
 
   return (
     <header className="w-full bg-white shadow-lg ">
@@ -142,15 +144,13 @@ export default function Header() {
                     </div>
 
                     <img
-                      src="/market-illustration.png"
+                      src="/alex.png"
                       alt="Marketplace"
                       className="w-full mt-6"
                     />
                   </div>
 
-                  {/* RIGHT SIDE */}
                   <div className="p-10 flex flex-col justify-between">
-                    {/* ======================== MAIN STEP ======================== */}
                     {step === "main" && (
                       <div>
                         <h2 className="text-[16px] text-black font-semibold mb-6">
@@ -172,7 +172,6 @@ export default function Header() {
                       </div>
                     )}
 
-                    {/* ======================== EMAIL STEP ======================== */}
                     {step === "email" && (
                       <div>
                         <h2 className="text-[16px] text-black font-semibold mb-6">
@@ -209,85 +208,210 @@ export default function Header() {
                       </div>
                     )}
 
-                    {/* ======================== BUYER STEP ======================== */}
                     {step === "buyer" && (
-                      <div>
-                        <h2 className="text-[16px] text-black font-semibold mb-6">
-                          Buyer Registration
-                        </h2>
-
-                        <input
-                          type="email"
-                          placeholder="Enter your email"
-                          className="w-full border rounded-lg p-3 mb-4"
-                        />
-
-                        <button className="w-full bg-black text-white rounded-lg py-3">
-                          Continue
-                        </button>
-
+                      <div className="space-y-5">
                         <button
-                          className="text-sm mt-4 underline"
                           onClick={() => setStep("email")}
+                          className="flex items-center text-sm text-gray-600 mb-2"
                         >
                           ← Back
                         </button>
+
+                        <div>
+                          <h2 className="text-[18px] font-semibold text-black">
+                            Create your buyer account
+                          </h2>
+                          <p className="text-sm text-gray-600">
+                            Buy products and hire freelancers in one place.
+                          </p>
+                        </div>
+
+                        <div className="flex flex-col gap-1">
+                          <label className="text-sm text-gray-700">
+                            Email Address
+                          </label>
+                          <input
+                            type="email"
+                            placeholder="e.g yourname@gmail.com"
+                            className="w-full border rounded-lg p-3 text-sm"
+                          />
+                        </div>
+
+                        <div className="flex flex-col gap-1">
+                          <label className="text-sm text-gray-700">
+                            Password
+                          </label>
+
+                          <div className="relative">
+                            <input
+                              type="password"
+                              className="w-full border rounded-lg p-3 text-sm pr-10"
+                              placeholder="••••••••"
+                            />
+                            <span className="absolute right-3 top-3 cursor-pointer text-gray-500">
+                              👁️
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="text-xs text-gray-600 space-y-2">
+                          <p className="flex items-center gap-2">
+                            ✔ At least 8 characters
+                          </p>
+                          <p className="flex items-center gap-2">
+                            ✔ At least 1 uppercase letter
+                          </p>
+                          <p className="flex items-center gap-2">
+                            ✔ At least 1 lowercase letter
+                          </p>
+                          <p className="flex items-center gap-2">
+                            ✔ At least 1 number
+                          </p>
+                        </div>
+
+                        <button className="w-full bg-gray-200 text-gray-500 rounded-lg py-3 mt-2">
+                          Continue
+                        </button>
                       </div>
                     )}
-
-                    {/* ======================== SELLER STEP ======================== */}
                     {step === "seller" && (
-                      <div>
-                        <h2 className="text-[16px] text-black font-semibold mb-6">
-                          Seller Registration
-                        </h2>
-
-                        <input
-                          type="text"
-                          placeholder="Business Name"
-                          className="w-full border rounded-lg p-3 mb-4"
-                        />
-
-                        <button className="w-full bg-black text-white rounded-lg py-3">
-                          Continue
-                        </button>
-
+                      <div className="space-y-5">
                         <button
-                          className="text-sm mt-4 underline"
                           onClick={() => setStep("email")}
+                          className="flex items-center text-sm text-gray-600 mb-2"
                         >
                           ← Back
                         </button>
+
+                        <div>
+                          <h2 className="text-[18px] font-semibold text-black">
+                            Create your seller account
+                          </h2>
+                          <p className="text-sm text-gray-600">
+                            Buy products and hire freelancers in one place.
+                          </p>
+                        </div>
+
+                        <div className="flex flex-col gap-1">
+                          <label className="text-sm text-gray-700">
+                            Email Address
+                          </label>
+                          <input
+                            type="email"
+                            placeholder="e.g yourname@gmail.com"
+                            className="w-full border rounded-lg p-3 text-sm"
+                          />
+                        </div>
+
+                        <div className="flex flex-col gap-1">
+                          <label className="text-sm text-gray-700">
+                            Password
+                          </label>
+
+                          <div className="relative">
+                            <input
+                              type="password"
+                              className="w-full border rounded-lg p-3 text-sm pr-10"
+                              placeholder="••••••••"
+                            />
+                            <span className="absolute right-3 top-3 cursor-pointer text-gray-500">
+                              👁️
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="text-xs text-gray-600 space-y-2">
+                          <p className="flex items-center gap-2">
+                            ✔ At least 8 characters
+                          </p>
+                          <p className="flex items-center gap-2">
+                            ✔ At least 1 uppercase letter
+                          </p>
+                          <p className="flex items-center gap-2">
+                            ✔ At least 1 lowercase letter
+                          </p>
+                          <p className="flex items-center gap-2">
+                            ✔ At least 1 number
+                          </p>
+                        </div>
+
+                        <button className="w-full bg-gray-200 text-gray-500 rounded-lg py-3 mt-2">
+                          Continue
+                        </button>
                       </div>
                     )}
-
-                    {/* ======================== FREELANCER STEP ======================== */}
                     {step === "freelancer" && (
-                      <div>
-                        <h2 className="text-[16px] text-black font-semibold mb-6">
-                          Freelancer Registration
-                        </h2>
-
-                        <input
-                          type="text"
-                          placeholder="Full Name"
-                          className="w-full border rounded-lg p-3 mb-4"
-                        />
-
-                        <button className="w-full bg-black text-white rounded-lg py-3">
-                          Continue
-                        </button>
-
+                      <div className="space-y-5">
                         <button
-                          className="text-sm mt-4 underline"
                           onClick={() => setStep("email")}
+                          className="flex items-center text-sm text-gray-600 mb-2"
                         >
                           ← Back
+                        </button>
+
+                        <div>
+                          <h2 className="text-[18px] font-semibold text-black">
+                            Create your freelancer account
+                          </h2>
+                          <p className="text-sm text-gray-600">
+                            Buy products and hire freelancers in one place.
+                          </p>
+                        </div>
+
+                        <div className="flex flex-col gap-1">
+                          <label className="text-sm text-gray-700">
+                            Email Address
+                          </label>
+                          <input
+                            type="email"
+                            placeholder="yourname@gmail.com"
+                            className="w-full border rounded-lg p-3 text-sm"
+                          />
+                        </div>
+
+                        <div className="flex flex-col gap-1">
+                          <label className="text-sm text-gray-700">
+                            Password
+                          </label>
+
+                          <div className="relative">
+                            <input
+                              type="password"
+                              className="w-full border rounded-lg p-3 text-sm pr-10"
+                              placeholder="hey"
+                              onChange={() => setShowPassword(showPassword)}
+                            />
+                            <button className="absolute right-3 top-3 cursor-pointer text-gray-500" onClick={() => setShowPassword(!showPassword)}>
+                              {showPassword ? (
+                                <FaEye className="text-black text-2xl" />
+                              ) : (
+                                <FaEyeSlash className="text-black text-2xl" />
+                              )}
+                            </button>
+                          </div>
+                        </div>
+
+                        <div className="text-xs text-gray-600 space-y-2">
+                          <p className="flex items-center gap-2">
+                            ✔ At least 8 characters
+                          </p>
+                          <p className="flex items-center gap-2">
+                            ✔ At least 1 uppercase letter
+                          </p>
+                          <p className="flex items-center gap-2">
+                            ✔ At least 1 lowercase letter
+                          </p>
+                          <p className="flex items-center gap-2">
+                            ✔ At least 1 number
+                          </p>
+                        </div>
+
+                        <button className="w-full bg-gray-200 text-gray-500 rounded-lg py-3 mt-2 cursor-pointer">
+                          Continue
                         </button>
                       </div>
                     )}
 
-                    {/* FOOTER */}
                     <p className="text-xs text-gray-500 leading-relaxed mt-6">
                       By continuing, you agree to our{" "}
                       <span className="underline">Terms & Conditions</span>,

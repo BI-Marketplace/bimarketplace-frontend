@@ -40,8 +40,7 @@ const categories = [
   "Accessories",
   "Audio",
   "Wearables",
-];
-
+ppppppppppp
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [loading, setLoading] = useState(false);
