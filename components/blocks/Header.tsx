@@ -30,7 +30,7 @@ export default function Header() {
   const [showPassword, setShowPassword] = useState(false)
 
   return (
-    <header className="w-full bg-white shadow-lg ">
+    <header className="w-full bg-white shadow-lg fixed top-0 left-0 z-50">
       <div className="mx-auto  px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between gap-4">
           {/* Left: Logo + Primary nav */}
@@ -46,9 +46,9 @@ export default function Header() {
             <nav className="hidden md:flex gap-4 ml-8">
               {[
                 { label: "Home", href: "/" },
-                { label: "Courses", href: "/courses" },
-                { label: "Projects", href: "/projects" },
-                { label: "About", href: "/about" },
+                { label: "Explore", href: "/explore" },
+                { label: "Services", href: "/services" },
+                { label: "Messages", href: "/messages" },
               ].map((item) => (
                 <Link
                   key={item.label}
@@ -70,7 +70,7 @@ export default function Header() {
               <div className="relative">
                 <Input
                   id="global-search"
-                  placeholder="Search courses, articles, projects..."
+                  placeholder="Search explore, articles, projects..."
                   className="pl-10 pr-4 "
                 />
                 <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">

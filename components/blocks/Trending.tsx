@@ -30,6 +30,71 @@ export const dummyProducts = [
     rating: 4,
     category: "Accessories",
   },
+  {
+  id: 4,
+  image: "/images/product4.jpg",
+  name: "Bluetooth Speaker",
+  price: 18000,
+  description: "Portable speaker with rich bass and 10-hour battery life.",
+  rating: 5,
+  category: "Audio",
+},
+{
+  id: 5,
+  image: "/images/product5.jpg",
+  name: "Wireless Keyboard",
+  price: 17000,
+  description: "Slim wireless keyboard with silent keys and long battery life.",
+  rating: 4,
+  category: "Accessories",
+},
+{
+  id: 6,
+  image: "/images/product6.jpg",
+  name: "Portable Power Bank",
+  price: 10000,
+  description: "10,000mAh power bank with dual USB ports and fast charging.",
+  rating: 4,
+  category: "Gadgets",
+},
+{
+  id: 7,
+  image: "/images/product7.jpg",
+  name: "Smart Glasses",
+  price: 45000,
+  description: "Augmented reality glasses with voice control and notifications.",
+  rating: 5,
+  category: "Wearables",
+},
+{
+  id: 8,
+  image: "/images/product8.jpg",
+  name: "Gaming Mouse",
+  price: 12000,
+  description: "Ergonomic mouse with RGB lighting and high-precision sensor.",
+  rating: 4,
+  category: "Accessories",
+},
+{
+  id: 9,
+  image: "/images/product9.jpg",
+  name: "HD Web Camera",
+  price: 22000,
+  description: "1080p HD webcam with autofocus for streaming and meetings.",
+  rating: 4,
+  category: "Computer",
+},
+{
+  id: 10,
+  image: "/images/product10.jpg",
+  name: "Noise-Canceling Headphones",
+  price: 35000,
+  description: "Over-ear headphones with active noise cancellation and long battery life.",
+  rating: 5,
+  category: "Audio",
+}
+
+
 ];
 function Trending({}: Props) {
   return (
@@ -38,7 +103,7 @@ function Trending({}: Props) {
         Trending on Zikbi
       </h2>
 
-      <div className="min-h-[280px] px-10 grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+      <div className="min-h-[280px] grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap- sm:gap-6">
         {dummyProducts.map((product) => (
           <ProductCard
             key={product.id}
