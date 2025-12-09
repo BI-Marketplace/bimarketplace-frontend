@@ -21,14 +21,12 @@ export default function HireProfessionals() {
 
   useEffect(() => {
     setLoading(true);
-    const timer = setTimeout(() => setLoading(false), 3100);
+    const timer = setTimeout(() => setLoading(false), 2800);
     return () => clearTimeout(timer);
   }, [activeCategory]);
 
 
- 
 
-  // const filterProducts = activeCategory === "All" ? HireCardsData : HireCardsData.filt
   return (
     <section className="w-full flex flex-col items-start">
       <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 px-4">
@@ -106,9 +104,25 @@ export default function HireProfessionals() {
         >
           Electronic Gadgets
         </button>
-      </div>
+          </div>
 
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 py-12">
+                {loading &&
+          [...Array(16)].map((_, index) => (
+            <div
+              key={index}
+              className="animate-pulse bg-gray-100 rounded-xl h-40 sm:h-48"
+            ></div>
+          ))}
+
+        {/* No products found */}
+        {!loading && filteredProducts.length === 0 && (
+          <div className="col-span-full flex justify-center items-center py-14">
+            <p className="text-gray-500 text-center text-sm sm:text-base">
+              No results found Try adjusting filters or search again
+            </p>
+          </div>
+        )}
         {filteredProducts.map((card, index) => (
           <HireCards
             key={index}
@@ -118,6 +132,7 @@ export default function HireProfessionals() {
             description={card.description}
             button={card.button}
             button2={card.button2}
+             ratings={card.ratings}
           />
         ))}
       </div>

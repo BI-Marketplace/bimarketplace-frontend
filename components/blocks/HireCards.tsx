@@ -1,16 +1,16 @@
 
-
 interface HireCardsProps{
     image: string,
     fullName: string,
     subtitle: string,
     description: string,
     button: string,
-    button2: string
+    button2: string,
+    ratings:string
 
 }
 
-export default function HireCards({image, fullName, subtitle, description, button, button2}: HireCardsProps) {
+export default function HireCards({image, fullName, subtitle, description, button, button2, ratings}: HireCardsProps) {
     return (
     <div className="w-[580px]">
     <div className="w-full h-[205px] border rounded-lg shadow hover:shadow-lg transition-shadow duration-300 bg-white flex justify-center items-center cursor-pointer">
@@ -28,9 +28,12 @@ export default function HireCards({image, fullName, subtitle, description, butto
           {fullName}
         </h3>
 
-        <h4 className="text-[14px] font-inter font-medium text-black mb-2">
-          {subtitle}
-        </h4>
+        <div className="text-[14px] font-inter font-medium text-black mb-2">
+          <p>
+          {`${subtitle} . ⭐ ${ratings}`}
+          </p>
+          {ratings}
+        </div>
 
         <p className="text-black text-[12px] mb-4">
           {description}
