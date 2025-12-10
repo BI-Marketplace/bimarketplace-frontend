@@ -111,6 +111,7 @@ export default function HireProfessionals() {
             key={index}
             fullName={card.fullName}
             subtitle={card.subtitle}
+            reviews={card.reviews}
             image={card.image}
             description={card.description}
             button={card.button}

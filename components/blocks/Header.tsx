@@ -10,6 +10,8 @@ import {
   X,
   User,
   Check,
+  BadgeQuestionMark,
+  CircleQuestionMark,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -29,11 +31,14 @@ import {
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Mail } from "lucide-react";
+import { ChevronDown } from "lucide-react";
+
 // import { Button } from "@/components/ui/button";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState("main");
+  const [drop, setDrop] = useState(false);
 
   return (
     <header className="w-full bg-white shadow-lg fixed top-0 left-0 z-50">
@@ -44,66 +49,141 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-3">
               <div className="">
                 <span className="text-lg font-semibold  font-jaro text-[#008000]">
-                  BIMARKETPLACE
+                  ZIKBI
                 </span>
               </div>
             </Link>
 
-            <nav className="hidden md:flex gap-4 ml-8">
-              {[
-                { label: "Home", href: "/" },
-                { label: "Explore", href: "/explore/product" },
-                { label: "Services", href: "/services" },
-                { label: "Messages", href: "/messages" },
-              ].map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 transition"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
+<nav className="hidden md:flex gap-4 ml-8 items-center">
+  {/* Home */}
+  <Link
+    href="/"
+    className="px-3 py-2 rounded-md text-sm font-normal text-black hover:bg-gray-100 transition"
+  >
+    Home
+  </Link>
+
+  {/* Explore Dropdown */}
+ <DropdownMenu open={drop} onOpenChange={setDrop}>
+        <div
+          onMouseEnter={() => setDrop(true)}
+          onMouseLeave={() => setDrop(false)}
+        >
+          <DropdownMenuTrigger asChild>
+            <button className="flex items-center gap-1 px-3 py-2 rounded-md text-sm font-normal text-black hover:bg-gray-100 transition">
+              Explore
+              <ChevronDown
+                className={`w-4 h-4 transition-transform ${
+                  drop ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+          </DropdownMenuTrigger>
+
+          <DropdownMenuContent
+            align="start"
+            className="w-44"
+            onMouseEnter={() => setDrop(true)}
+            onMouseLeave={() => setDrop(false)}
+          >
+            <DropdownMenuItem asChild>
+              <Link href="/explore/product">Products</Link>
+            </DropdownMenuItem>
+
+            <DropdownMenuItem asChild>
+              <Link href="/explore/seller">Seller</Link>
+            </DropdownMenuItem>
+
+           
+          </DropdownMenuContent>
+        </div>
+      </DropdownMenu>
+
+
+  {/* Services */}
+  <Link
+    href="/services"
+    className="px-3 py-2 rounded-md text-sm font-normal text-black hover:bg-gray-100 transition"
+  >
+    Services
+  </Link>
+
+  {/* Messages */}
+  <Link
+    href="/messages"
+    className="px-3 py-2 rounded-md text-sm font-normal text-black hover:bg-gray-100 transition"
+  >
+    Messages
+  </Link>
+</nav>
           </div>
 
           {/* Middle: Search (grows) */}
-          <div className="flex flex-1 justify-center md:justify-end">
-            <div className="w-full max-w-lg text-[12px] placeholder-sm text-normal">
-              <label htmlFor="global-search" className="sr-only">
-                Search
-              </label>
-              <div className="relative">
-                <Input
-                  id="global-search"
-                  placeholder="Search explore, articles, projects..."
-                  className="pl-10 pr-4 "
-                />
-                <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                  <SearchIcon size={16} />
-                </div>
-              </div>
-            </div>
-          </div>
+       <div className="flex flex-1 justify-center md:justify-end">
+  <div className="w-full max-w-lg text-[12px] text-normal">
+    <label htmlFor="global-search" className="sr-only">
+      Search
+    </label>
+
+    <div className="relative flex w-full">
+      {/* Search Input */}
+      <div className="relative flex-1">
+        <Input
+          id="global-search"
+          placeholder="Search explore, articles, projects..."
+          className="pl-10 pr-3 rounded-r-none"
+        />
+        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+          <SearchIcon size={16} />
+        </div>
+      </div>
+
+      {/* Right-side Dropdown */}
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <button className="flex items-center gap-1 px-3 border border-l-0 rounded-l-none rounded-r-md bg-white text-black hover:bg-gray-100 transition">
+            Filter
+            <ChevronDown className="w-4 h-4" />
+          </button>
+        </DropdownMenuTrigger>
+
+        <DropdownMenuContent align="end" className="w-40">
+          <DropdownMenuItem>All</DropdownMenuItem>
+          <DropdownMenuItem>Articles</DropdownMenuItem>
+          <DropdownMenuItem>Projects</DropdownMenuItem>
+          <DropdownMenuItem>Explore</DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </div>
+  </div>
+</div>
 
           {/* Right: Icons + Avatar */}
           <div className="flex items-center gap-3">
             <div className="hidden sm:flex items-center gap-2">
               <Button
-                variant="ghost"
+                // variant="ghost"
+                size="icon"
+                title="Cart"
+                className="h-10 w-10 bg-white text-black hover:bg-slate-50 cursor-pointer"
+              >
+                <ShoppingCart />
+              </Button>
+              <Button
+                // variant="ghost"
                 size="icon"
                 title="Notifications"
-                className="h-10 w-10"
+                className="h-10 w-10 bg-white text-black hover:bg-slate-50 cursor-pointer"
               >
                 <Bell />
               </Button>
               <Button
-                variant="ghost"
+                // variant="ghost"
                 size="icon"
-                title="Cart"
-                className="h-10 w-10"
+                title="Notifications"
+                className="h-10 w-10 bg-white text-black hover:bg-slate-50 cursor-pointer"
               >
-                <ShoppingCart />
+                <CircleQuestionMark />
               </Button>
             </div>
 
@@ -111,7 +191,7 @@ export default function Header() {
               <DropdownMenuTrigger asChild>
                 <button
                   aria-label="Open account menu"
-                  className="flex items-center gap-2 rounded-full hover:bg-slate-50 p-1"
+                  className="flex items-center gap-2 text-gray-500 rounded-full hover:bg-slate-50 p-1"
                 >
                   <Avatar>
                     <AvatarImage src="/images/avatar.png" alt="User avatar" />

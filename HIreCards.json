@@ -1,25 +1,19 @@
 [
     {
         "fullName": "David John",
-        "subtitle": "UI UX Designer . ⭐ 4.5 (2.5k Ratings)",
+        "subtitle": "UI UX Designer ",
+        "reviews": "  4.5 (2.5k Ratings)",
         "description": "Premium UI designs for businesses, startups and personal brands",
         "image": "alex.png",
         "button": "Rate: #75k/hr",
         "button2": "Lagos,Nigeria",
         "category": "Web Development"
     },
-    {
-      "fullName": "Maxwell small",
-      "subtitle": "fullStack development. ⭐ 4.5 (2.5k Ratings)",
-      "description": "Experienced in full-stack development and cloud computing.",
-      "image": "channels4_profile 1.png",
-      "button": "Rate: #75k/hr",
-      "button2": "Lagos,Nigeria",
-      "category": "Cyber Security"
-    },
+
     {
       "fullName": "Favour Doe",
-      "subtitle": "UI UX Designer . ⭐ 4.5 (2.5k Ratings)",
+      "subtitle": "UI UX Designer ",
+      "reviews": "  4.5 (2.5k Ratings)",
       "description": "Experienced in full-stack development and cloud computing.",
       "image": "alex.png",
       "button": "Rate: #75k/hr",
@@ -29,7 +23,8 @@
 
     {
       "fullName": "Favour Doe",
-      "subtitle": "UI UX Designer . ⭐ 4.5 (2.5k Ratings)",
+      "subtitle": "UI UX Designer ",
+      "reviews": "  4.5 (2.5k Ratings)",
       "description": "Experienced in full-stack development and cloud computing.",
       "image": "alex.png",
       "button": "Rate: #75k/hr",
@@ -38,7 +33,8 @@
     },
     {
       "fullName": "Favour Doe",
-      "subtitle": "UI UX Designer . ⭐ 4.5 (2.5k Ratings)",
+      "subtitle": "UI UX Designer ",
+      "reviews": "  4.5 (2.5k Ratings)",
       "description": "Experienced in full-stack development and cloud computing.",
       "image": "alex.png",
       "button": "Rate: #75k/hr",
@@ -47,7 +43,8 @@
     },
     {
       "fullName": "Favour Doe",
-      "subtitle": "UI UX Designer . ⭐ 4.5 (2.5k Ratings)",
+      "subtitle": "UI UX Designer ",
+      "reviews": "  4.5 (2.5k Ratings)",
       "description": "Experienced in full-stack development and cloud computing.",
       "image": "alex.png",
       "button": "Rate: #75k/hr",
@@ -56,7 +53,8 @@
     },
     {
       "fullName": "Favour Doe",
-      "subtitle": "UI UX Designer . ⭐ 4.5 (2.5k Ratings)",
+      "subtitle": "UI UX Designer ",
+      "reviews": "  4.5 (2.5k Ratings)",
       "description": "Experienced in full-stack development and cloud computing.",
       "image": "alex.png",
       "button": "Rate: #75k/hr",
@@ -65,7 +63,8 @@
     },
     {
       "fullName": "Favour Doe",
-      "subtitle": "UI UX Designer . ⭐ 4.5 (2.5k Ratings)",
+      "subtitle": "UI UX Designer ",
+      "reviews": "  4.5 (2.5k Ratings)",
       "description": "Experienced in full-stack development and cloud computing.",
       "image": "alex.png",
       "button": "Rate: #75k/hr",
@@ -74,7 +73,8 @@
     },
     {
       "fullName": "Favour Doe",
-      "subtitle": "UI UX Designer . ⭐ 4.5 (2.5k Ratings)",
+      "subtitle": "UI UX Designer ",
+      "reviews": "  4.5 (2.5k Ratings)",
       "description": "Experienced in full-stack development and cloud computing.",
       "image": "alex.png",
       "button": "Rate: #75k/hr",
@@ -83,7 +83,8 @@
     },
     {
       "fullName": "Favour Doe",
-      "subtitle": "UI UX Designer . ⭐ 4.5 (2.5k Ratings)",
+      "subtitle": "UI UX Designer ",
+      "reviews": "  4.5 (2.5k Ratings)",
       "description": "Experienced in full-stack development and cloud computing.",
       "image": "alex.png",
       "button": "Rate: #75k/hr",
@@ -92,7 +93,8 @@
     },
     {
       "fullName": "Angeline Scott",
-      "subtitle": "Game Developer . ⭐ 4.5 (2.5k Ratings)",
+      "subtitle": "Game Developer ",
+      "reviews": "  4.5 (2.5k Ratings)",
       "description": "Experienced in Game development and cloud computing.",
       "image": "micheal.png",
       "button": "Rate: #75k/hr",
@@ -101,7 +103,8 @@
     },
     {
       "fullName": "Angeline Scott",
-      "subtitle": "Game Developer . ⭐ 4.5 (2.5k Ratings)",
+      "subtitle": "Game Developer ",
+      "reviews": "  4.5 (2.5k Ratings)",
       "description": "Experienced in Game development and cloud computing.",
       "image": "micheal.png",
       "button": "Rate: #75k/hr",
@@ -110,7 +113,8 @@
     },
     {
       "fullName": "Angeline Scott",
-      "subtitle": "Game Developer . ⭐ 4.5 (2.5k Ratings)",
+      "subtitle": "Game Developer ",
+      "reviews": "  4.5 (2.5k Ratings)",
       "description": "Experienced in Game development and cloud computing.",
       "image": "micheal.png",
       "button": "Rate: #75k/hr",
@@ -119,7 +123,8 @@
     },
     {
       "fullName": "Angeline Scott",
-      "subtitle": "Game Developer . ⭐ 4.5 (2.5k Ratings)",
+      "subtitle": "Game Developer ",
+      "reviews": "  4.5 (2.5k Ratings)",
       "description": "Experienced in Game development and cloud computing.",
       "image": "micheal.png",
       "button": "Rate: #75k/hr",
@@ -128,28 +133,20 @@
     },
     {
       "fullName": "Angeline Scott",
-      "subtitle": "Game Developer . ⭐ 4.5 (2.5k Ratings)",
+      "subtitle": "Game Developer ",
+      "reviews": "  4.5 (2.5k Ratings)",
       "description": "Experienced in Game development and cloud computing.",
       "image": "micheal.png",
       "button": "Rate: #75k/hr",
       "button2": "Lagos,Nigeria",
       "category": "Cyber Security"
-    }
-]
+    },
 
 
-  {
-    "fullName": "Maxwell Small",
-    "subtitle": "FullStack Development . ⭐ 4.5 (2.5k Ratings)",
-    "description": "Experienced in full-stack development and cloud computing.",
-    "image": "channels4_profile 1.png",
-    "button": "Rate: #75k/hr",
-    "button2": "Lagos, Nigeria",
-    "category": "Cyber Security"
-  },
   {
     "fullName": "Favour Doe",
-    "subtitle": "UI UX Designer . ⭐ 4.5 (2.5k Ratings)",
+    "subtitle": "UI UX Designer ",
+    "reviews": "  4.5 (2.5k Ratings)",
     "description": "Experienced in full-stack development and cloud computing.",
     "image": "alex.png",
     "button": "Rate: #75k/hr",
@@ -158,7 +155,8 @@
   },
   {
     "fullName": "Angeline Scott",
-    "subtitle": "Game Developer . ⭐ 4.5 (2.5k Ratings)",
+    "subtitle": "Game Developer ",
+    "reviews": "  4.5 (2.5k Ratings)",
     "description": "Experienced in Game development and cloud computing.",
     "image": "micheal.png",
     "button": "Rate: #75k/hr",
@@ -167,7 +165,8 @@
   },
   {
     "fullName": "Sunshine",
-    "subtitle": "Frontend Developer . ⭐ 4.5 (2.5k Ratings)",
+    "subtitle": "Frontend Developer ",
+    "reviews": "  4.5 (2.5k Ratings)",
     "description": "Specialist in responsive web interfaces and modern frontend frameworks.",
     "image": "frontend.png",
     "button": "Rate: #65k/hr",
