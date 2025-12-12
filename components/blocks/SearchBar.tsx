@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState, useAppDispatch } from "@/store/store";
 import { setQuery, removeRecent } from "@/store/searchSlice";
-import { Flame, Search, X } from "lucide-react";
+import { Flame, Search, X, Filter } from "lucide-react";
+import { FaFilter } from "react-icons/fa6";
 
 function SearchBar() {
   const dispatch = useAppDispatch();
@@ -27,17 +28,15 @@ function SearchBar() {
         onChange={handleChange}
         onFocus={() => setInputFocus(true)}
         onBlur={() => setTimeout(() => setInputFocus(false), 200)} // allow clicks on recent
-        className="w-full border text-black rounded-lg px-4 py-2 pr-32 focus:outline-none focus:ring-2 focus:ring-green-500"
+        className="w-full border border-[#E6F4EA] border-2 text-black rounded-lg px-4 py-2 pr-32 focus:outline-none focus:ring-2 focus:ring-green-500"
       />
 
       {/* Filter inside input */}
       <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex items-center gap-2">
         <Search size={16} />
         <span className="text-sm text-gray-700">Filter</span>
-        <div className="w-5 h-5 border-2 border-gray-700 flex flex-col justify-between items-center p-[2px]">
-          <span className="w-full h-[2px] bg-gray-700"></span>
-          <span className="w-full h-[2px] bg-gray-700"></span>
-          <span className="w-full h-[2px] bg-gray-700"></span>
+        <div className="w-5 h-5 text-gray-400 flex flex-col justify-between items-center p-[2px]">
+          <Filter />
         </div>
       </div>
 
