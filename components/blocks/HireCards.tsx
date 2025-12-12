@@ -7,7 +7,8 @@ interface HireCardsProps{
     reviews: string,
     description: string,
     button: string,
-    button2: string
+    button2: string,
+    ratings:string
 
 }
 

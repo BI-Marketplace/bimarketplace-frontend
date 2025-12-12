@@ -31,6 +31,7 @@ import {
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Mail } from "lucide-react";
+import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { ChevronDown } from "lucide-react";
 
 // import { Button } from "@/components/ui/button";
@@ -39,6 +40,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState("main");
   const [drop, setDrop] = useState(false);
+  const [showPassword, setShowPassword] = useState(false)
 
   return (
     <header className="w-full bg-white shadow-lg fixed top-0 left-0 z-50">
@@ -212,9 +214,9 @@ export default function Header() {
             </DropdownMenu>
 
             <Dialog open={open} onOpenChange={setOpen}>
-              <DialogContent className=" w-full max-w-xl sm:max-w-2xl   p-0 rounded-xl overflow-hidden bg-white   min-h-[550px] md:min-h-2/3">
+              <DialogContent className="w-full max-w-xl sm:max-w-2xl p-0 rounded-xl overflow-hidden bg-white min-h-[550px] md:min-h-2/3">
                 <div className="grid grid-cols-1 md:grid-cols-2 h-full">
-                  {/* LEFT SIDE */}
+                  {/* LEFT */}
                   <div className="bg-[#E6F4EA] py-10 pl-10 flex flex-col justify-between gap-10">
                     <div>
                       <h2 className="text-[15px] font-semibold text-black mb-3">
@@ -223,25 +225,25 @@ export default function Header() {
 
                       <ul className="space-y-1.5 text-xs text-gray-700">
                         <li className="flex items-center gap-2">
-                          <Check size={12} color="green" />{" "}
+                          <Check size={12} color="green" />
                           <span className="text-gray-800 text-xs font-extralight">
                             Buy what you need
                           </span>
                         </li>
                         <li className="flex items-center gap-2">
-                          <Check size={12} color="green" />{" "}
+                          <Check size={12} color="green" />
                           <span className="text-gray-800 text-xs font-extralight">
                             Sell what you have
                           </span>
                         </li>
                         <li className="flex items-center gap-2">
-                          <Check size={12} color="green" />{" "}
+                          <Check size={12} color="green" />
                           <span className="text-gray-800 text-xs font-extralight">
                             Hire who you trust
                           </span>
                         </li>
                         <li className="flex items-center gap-2">
-                          <Check size={12} color="green" />{" "}
+                          <Check size={12} color="green" />
                           <span className="text-gray-800 text-xs font-extralight">
                             From the comfort of your home
                           </span>
@@ -256,84 +258,83 @@ export default function Header() {
                     />
                   </div>
 
-                  {/* RIGHT SIDE */}
+                  {/* RIGHT */}
                   <div className="p-6 flex flex-col justify-between text-black">
+                    {/* MAIN STEP */}
                     {step === "main" && (
                       <div className="gap-10 grid">
                         <div>
-                          <h2 className="text-[15px] text-sm font-semibold text-black ">
+                          <h2 className="text-[15px] font-semibold text-black">
                             Create a new account
                           </h2>
-
-                          <p className="text-black text-[10px] font-extralight mb-3">
+                          <p className="text-[10px] font-extralight">
                             Already have an account?{" "}
                             <span className="text-[#008000]">Login</span>
                           </p>
                         </div>
 
                         <div>
-                          <button className="w-full border rounded-lg py-2.5 text-sm flex gap-2 justify-center mb-3 text-black">
-                            <FcGoogle className="text-[18px]" />
-                            Continue with Google
+                          <button className="w-full border rounded-lg py-2.5 text-sm flex gap-2 justify-center mb-3">
+                            <FcGoogle className="text-[18px]" /> Continue with
+                            Google
                           </button>
 
                           <button
                             onClick={() => setStep("email")}
-                            className="w-full border rounded-lg py-2.5 text-sm flex gap-2 justify-center text-black"
+                            className="w-full border rounded-lg py-2.5 text-sm flex gap-2 justify-center"
                           >
-                            <Mail size={16} />
-                            Continue with Email
+                            <Mail size={16} /> Continue with Email
                           </button>
                         </div>
                       </div>
                     )}
 
+                    {/* SELECT ROLE */}
                     {step === "email" && (
                       <div>
-                        <h2 className="text-[15px] font-semibold text-black mb-4">
+                        <h2 className="text-[15px] font-semibold mb-4">
                           What best describes you?
                         </h2>
 
                         <button
                           onClick={() => setStep("buyer")}
-                          className="w-full border rounded-lg py-2.5 text-sm mb-2.5 text-black"
+                          className="w-full border rounded-lg py-2.5 text-sm mb-2.5"
                         >
                           Buyer
                         </button>
-
                         <button
                           onClick={() => setStep("seller")}
-                          className="w-full border rounded-lg py-2.5 text-sm mb-2.5 text-black"
+                          className="w-full border rounded-lg py-2.5 text-sm mb-2.5"
                         >
                           Seller
                         </button>
-
                         <button
                           onClick={() => setStep("freelancer")}
-                          className="w-full border rounded-lg py-2.5 text-sm text-black"
+                          className="w-full border rounded-lg py-2.5 text-sm"
                         >
                           Freelancer
                         </button>
 
                         <button
-                          className="text-xs mt-3 underline text-black"
                           onClick={() => setStep("main")}
+                          className="text-xs mt-3 underline"
                         >
                           ← Back
                         </button>
                       </div>
                     )}
 
+                    {/* BUYER */}
                     {step === "buyer" && (
                       <div>
-                        <h2 className="text-[15px] font-semibold text-black mb-4">
+                        <h2 className="text-[15px] font-semibold mb-4">
                           Buyer Registration
                         </h2>
 
                         <input
                           type="email"
                           placeholder="Enter your email"
-                          className="w-full border rounded-lg p-2.5 text-sm mb-3 text-black placeholder:text-gray-500"
+                          className="w-full border rounded-lg p-2.5 text-sm mb-3"
                         />
 
                         <button className="w-full bg-black text-white rounded-lg py-2.5 text-sm">
@@ -341,79 +342,137 @@ export default function Header() {
                         </button>
 
                         <button
-                          className="text-xs mt-3 underline text-black"
                           onClick={() => setStep("email")}
+                          className="text-xs mt-3 underline"
                         >
                           ← Back
                         </button>
                       </div>
                     )}
 
+                    {/* SELLER */}
                     {step === "seller" && (
-                      <div>
-                        <h2 className="text-[15px] font-semibold text-black mb-4">
-                          Seller Registration
-                        </h2>
-
-                        <input
-                          type="text"
-                          placeholder="Business Name"
-                          className="w-full border rounded-lg p-2.5 text-sm mb-3 text-black placeholder:text-gray-500"
-                        />
-
-                        <button className="w-full bg-black text-white rounded-lg py-2.5 text-sm">
-                          Continue
-                        </button>
-
+                      <div className="space-y-5">
                         <button
-                          className="text-xs mt-3 underline text-black"
                           onClick={() => setStep("email")}
+                          className="text-xs underline"
                         >
                           ← Back
+                        </button>
+
+                        <div>
+                          <h2 className="text-[18px] font-semibold">
+                            Create your seller account
+                          </h2>
+                          <p className="text-sm text-gray-600">
+                            Buy products and hire freelancers in one place.
+                          </p>
+                        </div>
+
+                        <div className="flex flex-col gap-1">
+                          <label className="text-sm">Email Address</label>
+                          <input
+                            type="email"
+                            placeholder="e.g yourname@gmail.com"
+                            className="w-full border rounded-lg p-3 text-sm"
+                          />
+                        </div>
+
+                        <div className="flex flex-col gap-1">
+                          <label className="text-sm">Password</label>
+                          <div className="relative">
+                            <input
+                              type="password"
+                              className="w-full border rounded-lg p-3 text-sm pr-10"
+                              placeholder="••••••••"
+                            />
+                            <span className="absolute right-3 top-3 cursor-pointer text-gray-500">
+                              👁️
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="text-xs text-gray-600 space-y-2">
+                          <p>✔ At least 8 characters</p>
+                          <p>✔ Uppercase letter</p>
+                          <p>✔ Lowercase letter</p>
+                          <p>✔ Number</p>
+                        </div>
+
+                        <button className="w-full bg-gray-200 text-gray-500 rounded-lg py-3 mt-2">
+                          Continue
                         </button>
                       </div>
                     )}
 
+                    {/* FREELANCER */}
                     {step === "freelancer" && (
-                      <div>
-                        <h2 className="text-[15px] font-semibold text-black mb-4">
-                          Freelancer Registration
-                        </h2>
-
-                        <input
-                          type="text"
-                          placeholder="Full Name"
-                          className="w-full border rounded-lg p-2.5 text-sm mb-3 text-black placeholder:text-gray-500"
-                        />
-
-                        <button className="w-full bg-black text-white rounded-lg py-2.5 text-sm">
-                          Continue
-                        </button>
-
+                      <div className="space-y-5">
                         <button
-                          className="text-xs mt-3 underline text-black"
                           onClick={() => setStep("email")}
+                          className="text-xs underline"
                         >
                           ← Back
+                        </button>
+
+                        <div>
+                          <h2 className="text-[18px] font-semibold">
+                            Create your freelancer account
+                          </h2>
+                          <p className="text-sm text-gray-600">
+                            Buy products and hire freelancers in one place.
+                          </p>
+                        </div>
+
+                        <div className="flex flex-col gap-1">
+                          <label className="text-sm">Email Address</label>
+                          <input
+                            type="email"
+                            placeholder="yourname@gmail.com"
+                            className="w-full border rounded-lg p-3 text-sm"
+                          />
+                        </div>
+
+                        <div className="flex flex-col gap-1">
+                          <label className="text-sm">Password</label>
+                          <div className="relative">
+                            <input
+                              type={showPassword ? "text" : "password"}
+                              className="w-full border rounded-lg p-3 text-sm pr-10"
+                              placeholder="••••••••"
+                            />
+                            <button
+                              className="absolute right-3 top-3 text-gray-500"
+                              onClick={() => setShowPassword(!showPassword)}
+                            >
+                              {showPassword ? <FaEye /> : <FaEyeSlash />}
+                            </button>
+                          </div>
+                        </div>
+
+                        <div className="text-xs text-gray-600 space-y-2">
+                          <p>✔ At least 8 characters</p>
+                          <p>✔ Uppercase letter</p>
+                          <p>✔ Lowercase letter</p>
+                          <p>✔ Number</p>
+                        </div>
+
+                        <button className="w-full bg-gray-200 text-gray-500 rounded-lg py-3 mt-2">
+                          Continue
                         </button>
                       </div>
                     )}
 
                     <p className="text-[10px] text-gray-600 leading-relaxed mt-4">
                       By continuing, you agree to our{" "}
-                      <span className="underline decoration-[#008000]">
-                        Terms & Conditions
-                      </span>
-                      ,{" "}
-                      <span className="underline decoration-[#008000]">
-                        Privacy Policy
-                      </span>
-                      , and{" "}
-                      <span className="underline decoration-[#008000]">
+                      <span className="underline text-[#008000]">Terms</span>,
+                      <span className="underline text-[#008000]"> Privacy</span>
+                      , and
+                      <span className="underline text-[#008000]">
+                        {" "}
                         User Guidelines
                       </span>
-                      . Please make sure you understand how your data is used
-                      and your responsibilities when using Zikbi.
+                      .
                     </p>
                   </div>
                 </div>

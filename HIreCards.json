@@ -7,7 +7,9 @@
         "image": "alex.png",
         "button": "Rate: #75k/hr",
         "button2": "Lagos,Nigeria",
-        "category": "Web Development"
+        "category": "Web Development",
+        "ratings": "4.5 (2.5k Ratings)"
+
     },
 
     {
@@ -18,7 +20,8 @@
       "image": "alex.png",
       "button": "Rate: #75k/hr",
       "button2": "Lagos,Nigeria",
-      "category": "Web Development"
+      "category": "Web Development",
+      "ratings": "4.5 (2.5k Ratings)"
     },
 
     {
@@ -29,7 +32,8 @@
       "image": "alex.png",
       "button": "Rate: #75k/hr",
       "button2": "Lagos,Nigeria",
-      "category": "Web Development"
+      "category": "Web Development",
+      "ratings": "4.5 (2.5k Ratings)"
     },
     {
       "fullName": "Favour Doe",
@@ -39,7 +43,8 @@
       "image": "alex.png",
       "button": "Rate: #75k/hr",
       "button2": "Lagos,Nigeria",
-      "category": "Cyber Security"
+      "category": "Cyber Security",
+      "ratings": "4.5 (2.5k Ratings)"
     },
     {
       "fullName": "Favour Doe",
@@ -49,7 +54,8 @@
       "image": "alex.png",
       "button": "Rate: #75k/hr",
       "button2": "Lagos,Nigeria",
-      "category": "Writing & Translation"
+      "category": "Writing & Translation",
+      "ratings": "4.5 (2.5k Ratings)"
     },
     {
       "fullName": "Favour Doe",
@@ -59,7 +65,8 @@
       "image": "alex.png",
       "button": "Rate: #75k/hr",
       "button2": "Lagos,Nigeria",
-      "category": "Writing & Translation"
+      "category": "Writing & Translation",
+      "ratings": "4.5 (2.5k Ratings)"
     },
     {
       "fullName": "Favour Doe",
@@ -69,7 +76,8 @@
       "image": "alex.png",
       "button": "Rate: #75k/hr",
       "button2": "Lagos,Nigeria",
-      "category": "Writing & Translation"
+      "category": "Writing & Translation",
+      "ratings": "4.5 (2.5k Ratings)"
     },
     {
       "fullName": "Favour Doe",
@@ -79,7 +87,8 @@
       "image": "alex.png",
       "button": "Rate: #75k/hr",
       "button2": "Lagos,Nigeria",
-      "category": "UI UX"
+      "category": "UI UX",
+      "ratings": "4.5 (2.5k Ratings)"
     },
     {
       "fullName": "Favour Doe",
@@ -89,7 +98,8 @@
       "image": "alex.png",
       "button": "Rate: #75k/hr",
       "button2": "Lagos,Nigeria",
-      "category": "Electronic Gadgets"
+      "category": "Electronic Gadgets",
+      "ratings": "4.5 (2.5k Ratings)"
     },
     {
       "fullName": "Angeline Scott",
@@ -99,7 +109,8 @@
       "image": "micheal.png",
       "button": "Rate: #75k/hr",
       "button2": "Lagos,Nigeria",
-      "category": "UI UX"
+      "category": "UI UX",
+      "ratings": "4.5 (2.5k Ratings)"
     },
     {
       "fullName": "Angeline Scott",
@@ -109,7 +120,8 @@
       "image": "micheal.png",
       "button": "Rate: #75k/hr",
       "button2": "Lagos,Nigeria",
-      "category": "Electronic Gadgets"
+      "category": "Electronic Gadgets",
+      "ratings": "4.5 (2.5k Ratings)"
     },
     {
       "fullName": "Angeline Scott",
@@ -119,7 +131,8 @@
       "image": "micheal.png",
       "button": "Rate: #75k/hr",
       "button2": "Lagos,Nigeria",
-      "category": "Web Development"
+      "category": "Web Development",
+      "ratings": "4.5 (2.5k Ratings)"
     },
     {
       "fullName": "Angeline Scott",
@@ -129,7 +142,8 @@
       "image": "micheal.png",
       "button": "Rate: #75k/hr",
       "button2": "Lagos,Nigeria",
-      "category": "UI UX"
+      "category": "UI UX",
+      "ratings": "4.5 (2.5k Ratings)"
     },
     {
       "fullName": "Angeline Scott",
@@ -151,7 +165,8 @@
     "image": "alex.png",
     "button": "Rate: #75k/hr",
     "button2": "Lagos, Nigeria",
-    "category": "Writing & Translation"
+    "category": "Writing & Translation",
+    "ratings": "4.5 (2.5k Ratings)"
   },
   {
     "fullName": "Angeline Scott",
@@ -173,5 +188,6 @@
     "button2": "Abuja, Nigeria",
     "category": "Frontend Development"
   }
+
 ]
 
