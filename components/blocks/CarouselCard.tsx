@@ -40,7 +40,7 @@ export default function CarouselDemo() {
   //END ADD
 
   return (
-    <div className="w-full px-5 mt-25">
+    <div className="w-full px-5 mt-20">
       <div className="relative w-full">
         {/* AUTO-SLIDE (5s per slide) */}
         <Carousel
