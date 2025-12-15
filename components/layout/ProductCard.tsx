@@ -1,7 +1,11 @@
+"use client";
+
 import React from "react";
 import { Star, UserCircle } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 interface ProductCardProps {
+  productId?: string;
   image: string;
   name: string;
   price: number;
@@ -12,6 +16,7 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({
+  productId,
   image,
   name,
   price,
@@ -20,9 +25,19 @@ export default function ProductCard({
   onClick,
   onAddToCart,
 }: ProductCardProps) {
+  const router = useRouter();
+
+  const handleCardClick = () => {
+    if (onClick) {
+      onClick();
+    } else if (productId) {
+      router.push(`/products/${productId}`);
+    }
+  };
+
   return (
     <div
-      onClick={onClick}
+      onClick={handleCardClick}
       className="bg-white rounded-lg shadow hover:shadow-lg transition p-4 cursor-pointer w-full max-w-[220px] flex flex-col"
     >
       <div className="w-full h-36 rounded-md overflow-hidden">
@@ -59,9 +74,8 @@ export default function ProductCard({
         className="mt-3 w-full bg-gray-100 text-gray-700 flex justify-center items-center  py-2 rounded-full text-sm font-medium transition "
       >
         <span className="flex items-center gap-2">
-
-         <UserCircle size={14}/>
-        <span>TechMart NG</span>
+          <UserCircle size={14} />
+          <span>TechMart NG</span>
         </span>
       </button>
     </div>

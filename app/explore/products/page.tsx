@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 
@@ -21,11 +23,11 @@ const product = (props: Props) => {
   return (
     <div className={`${inter.className} min-h-screen bg-zinc-50 dark:bg-black`}>
       <Header />
-        <ProductTab/>
+        {/* <ProductTab/> */}
       <main className="w-full max-w-7xl mx-auto flex flex-col gap-8 px-2 sm:px-6 lg:px-8">
         
         <CarouselCard />
-        <ProductDetails/>
+        {/* <ProductDetails/> */}
         <SearchBar />
         <Products />
       </main>

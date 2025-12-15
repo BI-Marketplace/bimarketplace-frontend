@@ -5,16 +5,43 @@ import { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
-export default function ProductDetails() {
+interface ProductDetailsProps {
+  product?: {
+    id: string;
+    image: string;
+    name: string;
+    price: number;
+    description: string;
+    rating: number;
+    category: string;
+  };
+}
+
+export default function ProductDetails({ product }: ProductDetailsProps) {
   const [currentImg, setCurrentImg] = useState(0);
 
-  const productImages = ["/shoe.png", "/alex.png", "/pana.png"];
+  // If no product is passed, show a default or loading state
+  if (!product) {
+    return (
+      <div className="w-full min-h-screen bg-white p-6 md:p-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="animate-pulse">
+            <div className="h-8 bg-gray-200 rounded w-1/4 mb-4"></div>
+            <div className="h-4 bg-gray-200 rounded w-1/2 mb-8"></div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Use product images array or create one from the product data
+  const productImages = [product.image, "/alex.png", "/pana.png"];
 
   const reviews = [
     {
       name: "Johnson G",
       date: "October 24, 2025",
-      rating: 5,
+      rating: product.rating,
       review:
         "I'm very pleased with this store. They always deliver top-quality electronics, fashion items, and lifestyle products.",
     },
@@ -23,12 +50,12 @@ export default function ProductDetails() {
       date: "October 24, 2025",
       rating: 5,
       review:
-        "We’ve committed to offering authentic goods, great support, and fast shipping.",
+        "We've committed to offering authentic goods, great support, and fast shipping.",
     },
     {
       name: "James M",
       date: "October 24, 2025",
-      rating: 5,
+      rating: 4,
       review: "Excellent service. I recommend this seller 100%.",
     },
   ];
@@ -41,7 +68,7 @@ export default function ProductDetails() {
           <div className="w-full border rounded-xl bg-white shadow-sm p-4 flex items-center justify-center">
             <Image
               src={productImages[currentImg]}
-              alt="Nike Shoe"
+              alt={product.name}
               width={500}
               height={500}
               className="object-contain"
@@ -78,13 +105,29 @@ export default function ProductDetails() {
         <div className="space-y-6">
           {/* Product Info */}
           <div className="border rounded-xl p-6 shadow-sm">
-            <h2 className="text-2xl font-semibold">Nike Shoe</h2>
-            <p className="text-lg text-gray-600 mt-2">₦25,000</p>
+            <h2 className="text-2xl font-semibold">{product.name}</h2>
+            <p className="text-lg text-gray-600 mt-2">₦{product.price.toLocaleString()}</p>
+            <div className="flex items-center mt-1 mb-3">
+              {[...Array(5)].map((_, i) => (
+                <FaStar 
+                  key={i} 
+                  className={i < product.rating ? "text-yellow-500" : "text-gray-300"} 
+                />
+              ))}
+              <span className="ml-2 text-sm text-gray-600">({product.rating}/5)</span>
+            </div>
             <p className="text-sm text-gray-500 mt-1">• In Stock</p>
+            <p className="text-gray-700 mt-3">{product.description}</p>
 
             <button className="mt-4 w-full bg-green-600 text-white py-3 rounded-xl hover:bg-green-700">
               Add to Cart
             </button>
+          </div>
+
+          {/* Category */}
+          <div className="border rounded-xl p-5 shadow-sm">
+            <h3 className="font-semibold mb-2">Category</h3>
+            <p className="text-sm text-gray-600">{product.category}</p>
           </div>
 
           {/* Delivery / Returns */}
@@ -107,7 +150,7 @@ export default function ProductDetails() {
           {/* Seller Info */}
           <div className="border rounded-xl p-5 shadow-sm flex items-center gap-4">
             <Image
-              src="/shoe.jpg"
+              src={product.image}
               width={50}
               height={50}
               alt="Seller"
@@ -124,7 +167,7 @@ export default function ProductDetails() {
       {/* Reviews */}
       <div className="max-w-7xl mx-auto mt-12">
         <div className="flex justify-between items-center">
-          <h3 className="text-xl font-semibold">Reviews (300)</h3>
+          <h3 className="text-xl font-semibold">Reviews ({reviews.length * 100})</h3>
           <button className="text-green-600 text-sm hover:underline">
             See All
           </button>

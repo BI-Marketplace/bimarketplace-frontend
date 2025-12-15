@@ -8,11 +8,11 @@ interface HireCardsProps{
     description: string,
     button: string,
     button2: string,
-    ratings:string
+    ratings?: string
 
 }
 
-export default function HireCards({image, fullName, subtitle, reviews, description, button, button2}: HireCardsProps) {
+export default function HireCards({image, fullName, subtitle, reviews, ratings, description, button, button2}: HireCardsProps) {
     return (
    <>
     {/* <div className="w-[580px]">

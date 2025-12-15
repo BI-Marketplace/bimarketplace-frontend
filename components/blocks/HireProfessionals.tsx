@@ -1,3 +1,5 @@
+"use client";
+
 import HireCardsData from "@/HIreCards.json";
 import HireCards from "@/components/blocks/HireCards";
 import { useState, useEffect } from "react";
@@ -133,7 +135,7 @@ export default function HireProfessionals() {
             description={card.description}
             button={card.button}
             button2={card.button2}
-             ratings={card.ratings}
+            ratings={card.ratings}
           />
         ))}
       </div>

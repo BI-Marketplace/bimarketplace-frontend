@@ -4,11 +4,12 @@ import React, { useState, useEffect } from "react";
 import ProductCard from "../layout/ProductCard";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/store";
+import Link from "next/link";
 
 // Dummy product data
 export const dummyProducts = [
   {
-    id: 1,
+    id: "1",
     image: "/images/product1.jpg",
     name: "Wireless Earbuds",
     price: 15000,
@@ -17,7 +18,7 @@ export const dummyProducts = [
     category: "Audio",
   },
   {
-    id: 2,
+    id: "2",
     image: "/images/product2.jpg",
     name: "Smart Watch",
     price: 23000,
@@ -26,7 +27,7 @@ export const dummyProducts = [
     category: "Wearables",
   },
   {
-    id: 3,
+    id: "3",
     image: "/images/product3.jpg",
     name: "USB-C Fast Charger",
     price: 5000,
@@ -35,7 +36,7 @@ export const dummyProducts = [
     category: "Accessories",
   },
   {
-    id: 6,
+    id: "4",
     image: "/images/product4.jpg",
     name: "Bluetooth Speaker",
     price: 18000,
@@ -44,7 +45,7 @@ export const dummyProducts = [
     category: "Audio",
   },
   {
-    id: 7,
+    id: "5",
     image: "/images/product5.jpg",
     name: "Gaming Mouse",
     price: 12000,
@@ -53,7 +54,7 @@ export const dummyProducts = [
     category: "Accessories",
   },
   {
-    id: 8,
+    id: "6",
     image: "/images/product6.jpg",
     name: "Portable Power Bank",
     price: 10000,
@@ -62,7 +63,7 @@ export const dummyProducts = [
     category: "Gadgets",
   },
   {
-    id: 9,
+    id: "7",
     image: "/images/product7.jpg",
     name: "Wireless Keyboard",
     price: 17000,
@@ -72,7 +73,7 @@ export const dummyProducts = [
     category: "Accessories",
   },
   {
-    id: 10,
+    id: "8",
     image: "/images/product8.jpg",
     name: "HD Web Camera",
     price: 22000,
@@ -82,20 +83,20 @@ export const dummyProducts = [
   },
 ];
 
-// Categories for filter buttons
+// Categories for filter buttons - updated to match actual product categories
 const categories = [
   "All",
-  "Phones",
-  "Laptops",
   "Accessories",
   "Audio",
   "Wearables",
-]
+  "Gadgets",
+  "Computer",
+];
 
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [loading, setLoading] = useState(false);
-
+  
   // Get search query from Redux
   const searchQuery = useSelector((state: RootState) => state.search.query);
 
@@ -145,10 +146,10 @@ export default function Products() {
       </div>
 
       {/* Products grid */}
-      <div className="min-h-[280px] grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6">
+      <div className="min-h-[280px] grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
         {/* Loading skeleton */}
         {loading &&
-          [...Array(4)].map((_, index) => (
+          [...Array(5)].map((_, index) => (
             <div
               key={index}
               className="animate-pulse bg-gray-100 rounded-xl h-40 sm:h-48"
@@ -159,7 +160,7 @@ export default function Products() {
         {!loading && filteredProducts.length === 0 && (
           <div className="col-span-full flex justify-center items-center py-14">
             <p className="text-gray-500 text-center text-sm sm:text-base">
-              No results found Try adjusting filters or search again
+              No results found. Try adjusting filters or search again.
             </p>
           </div>
         )}
@@ -167,16 +168,21 @@ export default function Products() {
         {/* Render filtered products */}
         {!loading &&
           filteredProducts.map((product) => (
-            <ProductCard
-              key={product.id}
-              image={product.image}
-              name={product.name}
-              price={product.price}
-              description={product.description}
-              rating={product.rating}
-              onClick={() => console.log("Clicked:", product.name)}
-              onAddToCart={() => console.log("Added to cart:", product.name)}
-            />
+            <Link 
+              key={product.id} 
+              href={`/explore/products/${product.id}`}
+              className="block"
+            >
+              <ProductCard
+                image={product.image}
+                name={product.name}
+                price={product.price}
+                description={product.description}
+                rating={product.rating}
+                onClick={() => window.location.href = `/explore/products/${product.id}`}
+                onAddToCart={() => console.log("Added to cart:", product.name)}
+              />
+            </Link>
           ))}
       </div>
     </div>
