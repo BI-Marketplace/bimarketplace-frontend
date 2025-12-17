@@ -6,7 +6,7 @@ import CarouselCard from "@/components/blocks/CarouselCard";
 import Products from "@/components/blocks/Products";
 import Trending from "@/components/blocks/Trending";
 import HireProfessionals from "@/components/blocks/HireProfessionals";
-
+import ProductTab from "@/components/blocks/ProductTab"
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

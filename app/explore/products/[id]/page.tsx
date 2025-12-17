@@ -143,12 +143,12 @@ const ProductDetailPage = () => {
           <div className="flex flex-col justify-center items-center py-20">
             <h2 className="text-2xl font-bold text-red-600 mb-4">Error</h2>
             <p className="text-gray-600">{error}</p>
-            <a 
+            {/* <a 
               href="/" 
               className="mt-6 px-6 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition"
             >
               Back to Home
-            </a>
+            </a> */}
           </div>
         ) : (
           <ProductDetails product={product} />
