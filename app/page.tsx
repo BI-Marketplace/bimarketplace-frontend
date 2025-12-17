@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import Header from "@/components/blocks/Header";
+import Header from "@/components/common/Header";
 import CarouselCard from "@/components/blocks/CarouselCard";
 import Products from "@/components/blocks/Products";
 import Trending from "@/components/blocks/Trending";

@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 import { useParams } from "next/navigation";
 
 import Footer from "@/components/layout/Footer";
-import Header from "@/components/blocks/Header";
+import Header from "@/components/common/Header";
 import CarouselCard from "@/components/blocks/CarouselCard";
 import Products from "@/components/blocks/Products";
 import SearchBar from "@/components/blocks/SearchBar";
@@ -130,7 +130,7 @@ const ProductDetailPage = () => {
     : [];
 
   return (
-    <div className={`${inter.className} min-h-screen bg-zinc-50 dark:bg-black`}>
+    <div className={`${inter.className} min-h-screen bg-white dark:bg-black`}>
       <Header />
       
       <main className="w-full max-w-7xl mx-auto flex flex-col gap-8 px-2 sm:px-6 lg:px-8 pt-20">

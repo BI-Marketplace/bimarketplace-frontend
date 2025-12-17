@@ -4,7 +4,7 @@ import React from "react";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 
 import Footer from "@/components/layout/Footer";
-import Header from "@/components/blocks/Header";
+import Header from "@/components/common/Header";
 import CarouselCard from "@/components/blocks/CarouselCard";
 import Products from "@/components/blocks/Products";
 import SearchBar from "@/components/blocks/SearchBar";
