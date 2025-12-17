@@ -25,7 +25,7 @@ const inter = Inter({
 
 export default function Home() {
   return (
-    <div className={`${inter.className} min-h-screen bg-zinc-50 dark:bg-black`}>
+    <div className={`${inter.className} min-h-screen bg-zinc-50`}>
         <Header />
       <main className="w-full max-w-7xl mx-auto flex flex-col gap-8 px-2 sm:px-6 lg:px-8">
         <CarouselCard />
