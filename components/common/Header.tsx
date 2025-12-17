@@ -56,31 +56,31 @@ export default function Header() {
               </div>
             </Link>
 
-<nav className="hidden md:flex gap-4 ml-8 items-center">
-  {/* Home */}
-  <Link
-    href="/"
-    className="px-3 py-2 rounded-md text-sm font-normal text-black hover:bg-gray-100 transition"
-  >
-    Home
-  </Link>
+            <nav className="hidden md:flex gap-4 ml-8 items-center">
+              {/* Home */}
+              <Link
+                href="/"
+                className="px-3 py-2 rounded-md text-sm font-normal text-black hover:bg-gray-100 transition"
+              >
+                Home
+              </Link>
 
-  {/* Explore Dropdown */}
- <DropdownMenu open={drop} onOpenChange={setDrop}>
-        <div
-          onMouseEnter={() => setDrop(true)}
-          onMouseLeave={() => setDrop(false)}
-        >
-          <DropdownMenuTrigger asChild>
-            <button className="flex items-center gap-1 px-3 py-2 rounded-md text-sm font-normal text-black hover:bg-gray-100 transition">
-              Explore
-              <ChevronDown
-                className={`w-4 h-4 transition-transform ${
-                  drop ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-          </DropdownMenuTrigger>
+              {/* Explore Dropdown */}
+              <DropdownMenu open={drop} onOpenChange={setDrop}>
+                <div
+                  onMouseEnter={() => setDrop(true)}
+                  onMouseLeave={() => setDrop(false)}
+                >
+                  <DropdownMenuTrigger asChild>
+                    <button className="flex items-center gap-1 px-3 py-2 rounded-md text-sm font-normal text-black hover:bg-gray-100 transition">
+                      Explore
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform ${
+                          drop ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                  </DropdownMenuTrigger>
 
           <DropdownMenuContent
             align="start"
@@ -92,73 +92,70 @@ export default function Header() {
               <Link href="/explore/products">Products</Link>
             </DropdownMenuItem>
 
-            <DropdownMenuItem asChild>
-              <Link href="/explore/seller">Seller</Link>
-            </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <Link href="/explore/seller">Seller</Link>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </div>
+              </DropdownMenu>
 
-           
-          </DropdownMenuContent>
-        </div>
-      </DropdownMenu>
+              {/* Services */}
+              <Link
+                href="/services"
+                className="px-3 py-2 rounded-md text-sm font-normal text-black hover:bg-gray-100 transition"
+              >
+                Services
+              </Link>
 
-
-  {/* Services */}
-  <Link
-    href="/services"
-    className="px-3 py-2 rounded-md text-sm font-normal text-black hover:bg-gray-100 transition"
-  >
-    Services
-  </Link>
-
-  {/* Messages */}
-  <Link
-    href="/messages"
-    className="px-3 py-2 rounded-md text-sm font-normal text-black hover:bg-gray-100 transition"
-  >
-    Messages
-  </Link>
-</nav>
+              {/* Messages */}
+              <Link
+                href="/messages"
+                className="px-3 py-2 rounded-md text-sm font-normal text-black hover:bg-gray-100 transition"
+              >
+                Messages
+              </Link>
+            </nav>
           </div>
 
           {/* Middle: Search (grows) */}
-       <div className="flex flex-1 justify-center md:justify-end">
-  <div className="w-full max-w-lg text-[12px] text-normal">
-    <label htmlFor="global-search" className="sr-only">
-      Search
-    </label>
+          <div className="flex flex-1 justify-center md:justify-end">
+            <div className="w-full max-w-lg text-[12px] text-normal">
+              <label htmlFor="global-search" className="sr-only">
+                Search
+              </label>
 
-    <div className="relative flex w-full">
-      {/* Search Input */}
-      <div className="relative flex-1">
-        <Input
-          id="global-search"
-          placeholder="Search explore, articles, projects..."
-          className="pl-10 pr-3 rounded-r-none"
-        />
-        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-          <SearchIcon size={16} />
-        </div>
-      </div>
+              <div className="relative flex w-full">
+                {/* Search Input */}
+                <div className="relative flex-1">
+                  <Input
+                    id="global-search"
+                    placeholder="Search explore, articles, projects..."
+                    className="pl-10 pr-3 rounded-r-none"
+                  />
+                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                    <SearchIcon size={16} />
+                  </div>
+                </div>
 
-      {/* Right-side Dropdown */}
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <button className="flex items-center gap-1 px-3 border border-l-0 rounded-l-none rounded-r-md bg-white text-black hover:bg-gray-100 transition">
-            Filter
-            <ChevronDown className="w-4 h-4" />
-          </button>
-        </DropdownMenuTrigger>
+                {/* Right-side Dropdown */}
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <button className="flex items-center gap-1 px-3 border border-l-0 rounded-l-none rounded-r-md bg-white text-black hover:bg-gray-100 transition">
+                      Filter
+                      <ChevronDown className="w-4 h-4" />
+                    </button>
+                  </DropdownMenuTrigger>
 
-        <DropdownMenuContent align="end" className="w-40">
-          <DropdownMenuItem>All</DropdownMenuItem>
-          <DropdownMenuItem>Articles</DropdownMenuItem>
-          <DropdownMenuItem>Projects</DropdownMenuItem>
-          <DropdownMenuItem>Explore</DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-    </div>
-  </div>
-</div>
+                  <DropdownMenuContent align="end" className="w-40">
+                    <DropdownMenuItem>All</DropdownMenuItem>
+                    <DropdownMenuItem>Articles</DropdownMenuItem>
+                    <DropdownMenuItem>Projects</DropdownMenuItem>
+                    <DropdownMenuItem>Explore</DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
+            </div>
+          </div>
 
           {/* Right: Icons + Avatar */}
           <div className="flex items-center gap-3">
@@ -252,7 +249,7 @@ export default function Header() {
                     </div>
 
                     <img
-                      src="pana.png"
+                      src="/pana.png"
                       alt="Marketplace"
                       className="w-full mt-6 max-h-44 object-contain"
                     />
@@ -274,14 +271,14 @@ export default function Header() {
                         </div>
 
                         <div>
-                          <button className="w-full border rounded-lg py-2.5 text-sm flex gap-2 justify-center mb-3">
+                          <button className="w-full border rounded-lg py-2.5 text-sm flex gap-2 justify-center mb-3 cursor-pointer">
                             <FcGoogle className="text-[18px]" /> Continue with
                             Google
                           </button>
 
                           <button
                             onClick={() => setStep("email")}
-                            className="w-full border rounded-lg py-2.5 text-sm flex gap-2 justify-center"
+                            className="w-full border rounded-lg py-2.5 text-sm flex gap-2 justify-center cursor-pointer"
                           >
                             <Mail size={16} /> Continue with Email
                           </button>
@@ -292,60 +289,89 @@ export default function Header() {
                     {/* SELECT ROLE */}
                     {step === "email" && (
                       <div>
+                        <button
+                          onClick={() => setStep("main")}
+                          className="text-xs mt-3 cursor-pointer"
+                        >
+                          ← Back
+                        </button>
+
                         <h2 className="text-[15px] font-semibold mb-4">
                           What best describes you?
                         </h2>
 
                         <button
                           onClick={() => setStep("buyer")}
-                          className="w-full border rounded-lg py-2.5 text-sm mb-2.5"
+                          className="w-full border rounded-lg py-2.5 text-sm mb-2.5 cursor-pointer"
                         >
                           Buyer
                         </button>
                         <button
                           onClick={() => setStep("seller")}
-                          className="w-full border rounded-lg py-2.5 text-sm mb-2.5"
+                          className="w-full border rounded-lg py-2.5 text-sm mb-2.5 cursor-pointer"
                         >
                           Seller
                         </button>
                         <button
                           onClick={() => setStep("freelancer")}
-                          className="w-full border rounded-lg py-2.5 text-sm"
+                          className="w-full border rounded-lg py-2.5 text-sm cursor-pointer"
                         >
                           Freelancer
-                        </button>
-
-                        <button
-                          onClick={() => setStep("main")}
-                          className="text-xs mt-3 underline"
-                        >
-                          ← Back
                         </button>
                       </div>
                     )}
 
                     {/* BUYER */}
                     {step === "buyer" && (
-                      <div>
-                        <h2 className="text-[15px] font-semibold mb-4">
-                          Buyer Registration
-                        </h2>
-
-                        <input
-                          type="email"
-                          placeholder="Enter your email"
-                          className="w-full border rounded-lg p-2.5 text-sm mb-3"
-                        />
-
-                        <button className="w-full bg-black text-white rounded-lg py-2.5 text-sm">
-                          Continue
-                        </button>
-
+                      <div className="space-y-5">
                         <button
                           onClick={() => setStep("email")}
-                          className="text-xs mt-3 underline"
+                          className="text-xs cursor-pointer"
                         >
                           ← Back
+                        </button>
+
+                        <div>
+                          <h2 className="text-[18px] font-semibold">
+                            Create your buyer account
+                          </h2>
+                          <p className="text-sm text-gray-600">
+                            Buy products and hire freelancers in one place.
+                          </p>
+                        </div>
+
+                        <div className="flex flex-col gap-1">
+                          <label className="text-sm">Email Address</label>
+                          <input
+                            type="email"
+                            placeholder="e.g yourname@gmail.com"
+                            className="w-full border rounded-lg p-3 text-sm"
+                          />
+                        </div>
+
+                        <div className="flex flex-col gap-1">
+                          <label className="text-sm">Password</label>
+                          <div className="relative">
+                            <input
+                              type="password"
+                              className="w-full border rounded-lg p-3 text-sm pr-10"
+                              placeholder="••••••••"
+                            />
+                            <span className="absolute right-3 top-3 cursor-pointer text-gray-500">
+                              👁️
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="text-xs text-gray-600 space-y-2">
+                          <p>✔ At least 8 characters</p>
+                          <p>✔ Uppercase letter</p>
+                          <p>✔ Lowercase letter</p>
+                          <p>✔ Number</p>
+                        </div>
+
+                        <button className="w-full bg-gray-200 text-gray-500 rounded-lg py-3 mt-2">
+                          Continue
                         </button>
                       </div>
                     )}
@@ -355,7 +381,7 @@ export default function Header() {
                       <div className="space-y-5">
                         <button
                           onClick={() => setStep("email")}
-                          className="text-xs underline"
+                          className="text-xs cursor-pointer"
                         >
                           ← Back
                         </button>
@@ -410,7 +436,7 @@ export default function Header() {
                       <div className="space-y-5">
                         <button
                           onClick={() => setStep("email")}
-                          className="text-xs underline"
+                          className="text-xs cursor-pointer"
                         >
                           ← Back
                         </button>
@@ -428,7 +454,7 @@ export default function Header() {
                           <label className="text-sm">Email Address</label>
                           <input
                             type="email"
-                            placeholder="yourname@gmail.com"
+                            placeholder="e.g yourname@gmail.com"
                             className="w-full border rounded-lg p-3 text-sm"
                           />
                         </div>
@@ -437,16 +463,13 @@ export default function Header() {
                           <label className="text-sm">Password</label>
                           <div className="relative">
                             <input
-                              type={showPassword ? "text" : "password"}
+                              type="password"
                               className="w-full border rounded-lg p-3 text-sm pr-10"
                               placeholder="••••••••"
                             />
-                            <button
-                              className="absolute right-3 top-3 text-gray-500"
-                              onClick={() => setShowPassword(!showPassword)}
-                            >
-                              {showPassword ? <FaEye /> : <FaEyeSlash />}
-                            </button>
+                            <span className="absolute right-3 top-3 cursor-pointer text-gray-500">
+                              👁️
+                            </span>
                           </div>
                         </div>
 
@@ -465,14 +488,9 @@ export default function Header() {
 
                     <p className="text-[10px] text-gray-600 leading-relaxed mt-4">
                       By continuing, you agree to our{" "}
-                      <span className="underline text-[#008000]">Terms</span>,
-                      <span className="underline text-[#008000]"> Privacy</span>
-                      , and
-                      <span className="underline text-[#008000]">
-                        {" "}
-                        User Guidelines
-                      </span>
-                      .
+                      <span className=" text-[#008000]">Terms</span>,
+                      <span className=" text-[#008000]"> Privacy</span>, and
+                      <span className=" text-[#008000]"> User Guidelines</span>.
                     </p>
                   </div>
                 </div>
