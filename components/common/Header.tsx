@@ -43,7 +43,7 @@ export default function Header() {
   const [showPassword, setShowPassword] = useState(false)
 
   return (
-    <header className="w-full bg-white shadow-lg fixed top-0 left-0 z-50">
+    <header className="w-full bg-white shadow-sm fixed top-0 left-0 z-50">
       <div className="mx-auto  px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between gap-4">
           {/* Left: Logo + Primary nav */}
@@ -89,7 +89,7 @@ export default function Header() {
             onMouseLeave={() => setDrop(false)}
           >
             <DropdownMenuItem asChild>
-              <Link href="/explore/product">Products</Link>
+              <Link href="/explore/products">Products</Link>
             </DropdownMenuItem>
 
             <DropdownMenuItem asChild>

@@ -4,6 +4,13 @@ import Image from "next/image";
 import { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
+import DetailCard from "../products/DetailCard";
+import ChooseLocation from "../products/ChooseLocation";
+import ChoosePaymentMethod from "../products/ChoosePaymentMethod";
+import AboutCard from "../products/AboutCard";
+import FeatureCard from "../products/FeatureCard";
+import SellerCard from "../products/SellerCard";
+import SingleReviewCard from "../products/SingleReviewCard";
 
 interface ProductDetailsProps {
   product?: {
@@ -34,8 +41,19 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
     );
   }
 
+  // Transform the product to match DetailCard's expected format
+  const detailCardProduct = {
+    id: parseInt(product.id),
+    name: product.name,
+    price: product.price,
+    rating: product.rating,
+    description: product.description,
+    stock: 120,        // mock or real value
+    reviewCount: 340,  // mock or real value
+  };
+
   // Use product images array or create one from the product data
-  const productImages = [product.image, "/alex.png", "/pana.png"];
+  const productImages = [product.image, "/ear_pod.png", "/ear_pod.png"];
 
   const reviews = [
     {
@@ -62,134 +80,80 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
 
   return (
     <div className="w-full min-h-screen bg-white p-6 md:p-10">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* LEFT SIDE - IMAGE */}
-        <div className="flex flex-col items-center gap-4">
-          <div className="w-full border rounded-xl bg-white shadow-sm p-4 flex items-center justify-center">
-            <Image
-              src={productImages[currentImg]}
-              alt={product.name}
-              width={500}
-              height={500}
-              className="object-contain"
-            />
-          </div>
+<div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10">
+  
+  {/* LEFT SIDE - STICKY IMAGE */}
+  <div className="flex flex-col items-center gap-4 sticky top-30 self-start">
+    <div className="w-full p-4 flex items-center justify-center">
+      <Image
+        src={productImages[currentImg]}
+        alt={product.name}
+        width={300}
+        height={300}
+        className="object-contain"
+      />
+    </div>
 
-          {/* ARROWS */}
-          <div className="flex items-center gap-4">
-            <button
-              onClick={() =>
-                setCurrentImg((prev) =>
-                  prev === 0 ? productImages.length - 1 : prev - 1
-                )
-              }
-              className="p-3 rounded-full bg-gray-100 hover:bg-gray-200"
-            >
-              <IoChevronBack size={20} />
-            </button>
+    {/* ARROWS */}
+    <div className="flex items-center gap-4">
+      <button
+        onClick={() =>
+          setCurrentImg((prev) =>
+            prev === 0 ? productImages.length - 1 : prev - 1
+          )
+        }
+        className="p-3 rounded-full text-black bg-gray-100 hover:bg-gray-200"
+      >
+        <IoChevronBack size={20} />
+      </button>
 
-            <button
-              onClick={() =>
-                setCurrentImg((prev) =>
-                  prev === productImages.length - 1 ? 0 : prev + 1
-                )
-              }
-              className="p-3 rounded-full bg-gray-100 hover:bg-gray-200"
-            >
-              <IoChevronForward size={20} />
-            </button>
-          </div>
-        </div>
+      <button
+        onClick={() =>
+          setCurrentImg((prev) =>
+            prev === productImages.length - 1 ? 0 : prev + 1
+          )
+        }
+        className="p-3 rounded-full text-black bg-gray-100 hover:bg-gray-200"
+      >
+        <IoChevronForward size={20} />
+      </button>
+    </div>
+  </div>
 
-        {/* RIGHT SIDE + INFO */}
-        <div className="space-y-6">
-          {/* Product Info */}
-          <div className="border rounded-xl p-6 shadow-sm">
-            <h2 className="text-2xl font-semibold">{product.name}</h2>
-            <p className="text-lg text-gray-600 mt-2">₦{product.price.toLocaleString()}</p>
-            <div className="flex items-center mt-1 mb-3">
-              {[...Array(5)].map((_, i) => (
-                <FaStar 
-                  key={i} 
-                  className={i < product.rating ? "text-yellow-500" : "text-gray-300"} 
-                />
-              ))}
-              <span className="ml-2 text-sm text-gray-600">({product.rating}/5)</span>
-            </div>
-            <p className="text-sm text-gray-500 mt-1">• In Stock</p>
-            <p className="text-gray-700 mt-3">{product.description}</p>
-
-            <button className="mt-4 w-full bg-green-600 text-white py-3 rounded-xl hover:bg-green-700">
-              Add to Cart
-            </button>
-          </div>
-
-          {/* Category */}
-          <div className="border rounded-xl p-5 shadow-sm">
-            <h3 className="font-semibold mb-2">Category</h3>
-            <p className="text-sm text-gray-600">{product.category}</p>
-          </div>
-
-          {/* Delivery / Returns */}
-          <div className="border rounded-xl p-5 shadow-sm">
-            <h3 className="font-semibold mb-2">Delivery & Returns</h3>
-            <p className="text-sm text-gray-600">
-              Delivered between <strong>Mon 20</strong> and{" "}
-              <strong>Thu 23</strong>
-            </p>
-          </div>
-
-          {/* Payment Method */}
-          <div className="border rounded-xl p-5 shadow-sm">
-            <h3 className="font-semibold mb-2">Payment Method</h3>
-            <p className="text-sm text-gray-600">
-              Pay on Delivery, Debit Card, Transfer
-            </p>
-          </div>
-
-          {/* Seller Info */}
-          <div className="border rounded-xl p-5 shadow-sm flex items-center gap-4">
-            <Image
-              src={product.image}
-              width={50}
-              height={50}
-              alt="Seller"
-              className="rounded-full"
-            />
-            <div>
-              <h4 className="font-semibold">Seller Information</h4>
-              <p className="text-sm text-gray-600">Verified Seller ✔️</p>
-            </div>
-          </div>
-        </div>
+  {/* RIGHT SIDE - SCROLLING CONTENT */}
+  <div className="space-y-6">
+    <div className="flex flex-col lg:flex-row gap-6">
+      
+      {/* Product Info */}
+      <div className="flex-1 flex flex-col gap-6">
+        <DetailCard product={detailCardProduct} />
+        <AboutCard />
+        <FeatureCard />
       </div>
+
+      {/* Delivery / Payment */}
+      <div className="flex flex-col gap-6 w-full lg:w-[350px]">
+        <ChooseLocation />
+        <ChoosePaymentMethod />
+        <SellerCard />
+      </div>
+
+    </div>
+  </div>
+</div>
+
 
       {/* Reviews */}
       <div className="max-w-7xl mx-auto mt-12">
         <div className="flex justify-between items-center">
-          <h3 className="text-xl font-semibold">Reviews ({reviews.length * 100})</h3>
-          <button className="text-green-600 text-sm hover:underline">
+          <h3 className="text-xl font-normal text-black">Reviews ({reviews.length * 100})</h3>
+          <button className="text-green-600 text-sm hover:underline cursor-pointer">
             See All
           </button>
         </div>
 
         <div className="mt-6 space-y-5">
-          {reviews.map((rev, i) => (
-            <div key={i} className="border rounded-xl p-6 shadow-sm">
-              <div className="flex items-center justify-between">
-                <h4 className="font-semibold">{rev.name}</h4>
-                <p className="text-sm text-gray-500">{rev.date}</p>
-              </div>
-
-              <div className="flex items-center mt-1">
-                {[...Array(rev.rating)].map((_, i) => (
-                  <FaStar key={i} className="text-yellow-500" />
-                ))}
-              </div>
-
-              <p className="text-gray-700 mt-3">{rev.review}</p>
-            </div>
-          ))}
+         <SingleReviewCard />
         </div>
       </div>
     </div>
