@@ -8,7 +8,7 @@ import { useState } from "react"
             const categories = ["Products", "Sellers"]
     return (
       <>
-        <div className="bg-white h-[70px] border-b border-2 border-gray-200 flex items-center justify-center mt-[70px] w-full">
+        <div className="bg-white h-[70px] border-b border-2 border-gray-200 flex items-center justify-center mt-[60px] w-full">
           <div className="w-[30%] flex items-center justify-center gap-2">
             <button
               onClick={() => setActiveTab(categories[0])}

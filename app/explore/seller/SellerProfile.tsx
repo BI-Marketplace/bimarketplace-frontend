@@ -1,5 +1,8 @@
 "use client";
 
+import Products from "@/components/blocks/Products";
+import Link from "next/link";
+
 import { FaStar } from "react-icons/fa";
 
 // import { Star } from "react-icons/fa";
@@ -86,29 +89,7 @@ export default function SellerProfile() {
           <span className="text-xs text-gray-500">View All</span>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-          {[...Array(9)].map((_, i) => (
-            <div key={i} className="border rounded-lg p-3 text-center">
-              <img
-                src="/headset.png"
-                className="w-20 h-20 mx-auto object-contain"
-                alt="Product"
-              />
-
-              <h4 className="text-sm font-medium mt-2">Wireless Headset</h4>
-
-              <div className="flex justify-center text-yellow-400 text-xs mt-1">
-                {[...Array(5)].map((_, i) => (
-                  <FaStar key={i} />
-                ))}
-              </div>
-
-              <p className="text-green-600 font-semibold text-sm mt-1">
-                ₦25,000
-              </p>
-            </div>
-          ))}
-        </div>
+        <Products />
       </div>
     </div>
   );

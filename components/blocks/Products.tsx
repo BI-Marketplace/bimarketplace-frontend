@@ -10,7 +10,7 @@ import Link from "next/link";
 export const dummyProducts = [
   {
     id: "1",
-    image: "/images/product1.jpg",
+    image: "headset.jpg",
     name: "Wireless Earbuds",
     price: 15000,
     description: "High-quality sound with noise cancellation.",
@@ -19,7 +19,7 @@ export const dummyProducts = [
   },
   {
     id: "2",
-    image: "/images/product2.jpg",
+    image: "/images/headset.jpg",
     name: "Smart Watch",
     price: 23000,
     description: "Tracks health, steps, sleep and notifications.",
